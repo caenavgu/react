@@ -1,12 +1,12 @@
 import React from 'react';
 
-export class Layout extends React.Component{
+
+export class Productscard extends React.Component{
     
     render(){
         return(
             <div >
-                <Header />
-                <Footer />
+               
             </div>
             );
     }

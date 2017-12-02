@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "906c42b58c453cb7b965"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7f83f7b0274e08fa1346"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -920,21 +920,6 @@ process.umask = function() { return 0; };
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process) {
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(17);
-} else {
-  module.exports = __webpack_require__(18);
-}
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 /**
@@ -971,6 +956,21 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+if (process.env.NODE_ENV === 'production') {
+  module.exports = __webpack_require__(17);
+} else {
+  module.exports = __webpack_require__(18);
+}
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 3 */
@@ -1168,7 +1168,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -1358,7 +1358,7 @@ module.exports = ExecutionEnvironment;
  * @typechecks
  */
 
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 
 /**
  * Upstream version of event listener. Does not take into account specific
@@ -11876,7 +11876,7 @@ return jQuery;
 "use strict";
 
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -11891,6 +11891,8 @@ var _jquery2 = _interopRequireDefault(_jquery);
 __webpack_require__(29);
 
 __webpack_require__(32);
+
+__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../css/component/styles.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 var _Layout = __webpack_require__(36);
 
@@ -11912,7 +11914,7 @@ _reactDom2.default.render(_react2.default.createElement(_Layout.Layout, null), d
  * LICENSE file in the root directory of this source tree.
  */
 
-var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(2),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
+var m=__webpack_require__(3),n=__webpack_require__(4),p=__webpack_require__(1),q="function"===typeof Symbol&&Symbol["for"],r=q?Symbol["for"]("react.element"):60103,t=q?Symbol["for"]("react.call"):60104,u=q?Symbol["for"]("react.return"):60105,v=q?Symbol["for"]("react.portal"):60106,w=q?Symbol["for"]("react.fragment"):60107,x="function"===typeof Symbol&&Symbol.iterator;
 function y(a){for(var b=arguments.length-1,e="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,c=0;c<b;c++)e+="\x26args[]\x3d"+encodeURIComponent(arguments[c+1]);b=Error(e+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}
 var z={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function A(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}A.prototype.isReactComponent={};A.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?y("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};A.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};
 function B(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}function C(){}C.prototype=A.prototype;var D=B.prototype=new C;D.constructor=B;m(D,A.prototype);D.isPureReactComponent=!0;function E(a,b,e){this.props=a;this.context=b;this.refs=n;this.updater=e||z}var F=E.prototype=new C;F.constructor=E;m(F,A.prototype);F.unstable_isAsyncReactComponent=!0;F.render=function(){return this.props.children};var G={current:null},H=Object.prototype.hasOwnProperty,I={key:!0,ref:!0,__self:!0,__source:!0};
@@ -11952,7 +11954,7 @@ var _assign = __webpack_require__(3);
 var emptyObject = __webpack_require__(4);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 var checkPropTypes = __webpack_require__(8);
 
 // TODO: this is special because it gets imported during build.
@@ -13373,7 +13375,7 @@ if (process.env.NODE_ENV === 'production') {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(1),l=__webpack_require__(9),B=__webpack_require__(3),C=__webpack_require__(2),ba=__webpack_require__(10),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ia=__webpack_require__(14),D=__webpack_require__(4);
+var aa=__webpack_require__(2),l=__webpack_require__(9),B=__webpack_require__(3),C=__webpack_require__(1),ba=__webpack_require__(10),da=__webpack_require__(11),ea=__webpack_require__(12),fa=__webpack_require__(13),ia=__webpack_require__(14),D=__webpack_require__(4);
 function E(a){for(var b=arguments.length-1,c="Minified React error #"+a+"; visit http://facebook.github.io/react/docs/error-decoder.html?invariant\x3d"+a,d=0;d<b;d++)c+="\x26args[]\x3d"+encodeURIComponent(arguments[d+1]);b=Error(c+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings.");b.name="Invariant Violation";b.framesToPop=1;throw b;}aa?void 0:E("227");
 var oa={children:!0,dangerouslySetInnerHTML:!0,defaultValue:!0,defaultChecked:!0,innerHTML:!0,suppressContentEditableWarning:!0,suppressHydrationWarning:!0,style:!0};function pa(a,b){return(a&b)===b}
 var ta={MUST_USE_PROPERTY:1,HAS_BOOLEAN_VALUE:4,HAS_NUMERIC_VALUE:8,HAS_POSITIVE_NUMERIC_VALUE:24,HAS_OVERLOADED_BOOLEAN_VALUE:32,HAS_STRING_BOOLEAN_VALUE:64,injectDOMPropertyConfig:function(a){var b=ta,c=a.Properties||{},d=a.DOMAttributeNamespaces||{},e=a.DOMAttributeNames||{};a=a.DOMMutationMethods||{};for(var f in c){ua.hasOwnProperty(f)?E("48",f):void 0;var g=f.toLowerCase(),h=c[f];g={attributeName:g,attributeNamespace:null,propertyName:f,mutationMethod:null,mustUseProperty:pa(h,b.MUST_USE_PROPERTY),
@@ -13670,12 +13672,12 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var React = __webpack_require__(1);
+var React = __webpack_require__(2);
 var invariant = __webpack_require__(5);
 var warning = __webpack_require__(6);
 var ExecutionEnvironment = __webpack_require__(9);
 var _assign = __webpack_require__(3);
-var emptyFunction = __webpack_require__(2);
+var emptyFunction = __webpack_require__(1);
 var EventListener = __webpack_require__(10);
 var getActiveElement = __webpack_require__(11);
 var shallowEqual = __webpack_require__(12);
@@ -36130,13 +36132,13 @@ exports.Layout = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _Header = __webpack_require__(37);
 
-var _Footer = __webpack_require__(38);
+var _Searchbar = __webpack_require__(38);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36161,8 +36163,8 @@ var Layout = exports.Layout = function (_React$Component) {
             return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_Header.Header, null),
-                _react2.default.createElement(_Footer.Footer, null)
+                _react2.default.createElement(_Searchbar.Searchbar, null),
+                _react2.default.createElement(_Header.Header, null)
             );
         }
     }]);
@@ -36184,7 +36186,7 @@ exports.Header = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(1);
+var _react = __webpack_require__(2);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -36206,89 +36208,89 @@ var Header = exports.Header = function (_React$Component) {
   }
 
   _createClass(Header, [{
-    key: "render",
+    key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        "div",
-        null,
+        'div',
+        { className: 'header' },
         _react2.default.createElement(
-          "nav",
-          { className: "navbar navbar-expand-lg navbar-light bg-light" },
+          'nav',
+          { className: 'navbar navbar-expand-lg navbar-light bg-light' },
           _react2.default.createElement(
-            "a",
-            { className: "navbar-brand", href: "#" },
-            "Navbar"
+            'a',
+            { className: 'navbar-brand', href: '#' },
+            'Navbar'
           ),
           _react2.default.createElement(
-            "button",
-            { className: "navbar-toggler", type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": "false", "aria-label": "Toggle navigation" },
-            _react2.default.createElement("span", { className: "navbar-toggler-icon" })
+            'button',
+            { className: 'navbar-toggler', type: 'button', 'data-toggle': 'collapse', 'data-target': '#navbarSupportedContent', 'aria-controls': 'navbarSupportedContent', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation' },
+            _react2.default.createElement('span', { className: 'navbar-toggler-icon' })
           ),
           _react2.default.createElement(
-            "div",
-            { className: "collapse navbar-collapse", id: "navbarSupportedContent" },
+            'div',
+            { className: 'collapse navbar-collapse', id: 'navbarSupportedContent' },
             _react2.default.createElement(
-              "ul",
-              { className: "navbar-nav mr-auto" },
+              'ul',
+              { className: 'navbar-nav mr-auto' },
               _react2.default.createElement(
-                "li",
-                { className: "nav-item active" },
+                'li',
+                { className: 'nav-item active' },
                 _react2.default.createElement(
-                  "a",
-                  { className: "nav-link", href: "#" },
-                  "Home ",
+                  'a',
+                  { className: 'nav-link', href: '#' },
+                  'Home ',
                   _react2.default.createElement(
-                    "span",
-                    { className: "sr-only" },
-                    "(current)"
+                    'span',
+                    { className: 'sr-only' },
+                    '(current)'
                   )
                 )
               ),
               _react2.default.createElement(
-                "li",
-                { className: "nav-item" },
+                'li',
+                { className: 'nav-item' },
                 _react2.default.createElement(
-                  "a",
-                  { className: "nav-link", href: "#" },
-                  "Link"
+                  'a',
+                  { className: 'nav-link', href: '#' },
+                  'Link'
                 )
               ),
               _react2.default.createElement(
-                "li",
-                { className: "nav-item dropdown" },
+                'li',
+                { className: 'nav-item dropdown' },
                 _react2.default.createElement(
-                  "a",
-                  { className: "nav-link dropdown-toggle", href: "#", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": "true", "aria-expanded": "false" },
-                  "Dropdown"
+                  'a',
+                  { className: 'nav-link dropdown-toggle', href: '#', id: 'navbarDropdown', role: 'button', 'data-toggle': 'dropdown', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
+                  'Dropdown'
                 ),
                 _react2.default.createElement(
-                  "div",
-                  { className: "dropdown-menu", "aria-labelledby": "navbarDropdown" },
+                  'div',
+                  { className: 'dropdown-menu', 'aria-labelledby': 'navbarDropdown' },
                   _react2.default.createElement(
-                    "a",
-                    { className: "dropdown-item", href: "#" },
-                    "Action"
+                    'a',
+                    { className: 'dropdown-item', href: '#' },
+                    'Action'
                   ),
                   _react2.default.createElement(
-                    "a",
-                    { className: "dropdown-item", href: "#" },
-                    "Another action"
+                    'a',
+                    { className: 'dropdown-item', href: '#' },
+                    'Another action'
                   ),
-                  _react2.default.createElement("div", { className: "dropdown-divider" }),
+                  _react2.default.createElement('div', { className: 'dropdown-divider' }),
                   _react2.default.createElement(
-                    "a",
-                    { className: "dropdown-item", href: "#" },
-                    "Something else here"
+                    'a',
+                    { className: 'dropdown-item', href: '#' },
+                    'Something else here'
                   )
                 )
               ),
               _react2.default.createElement(
-                "li",
-                { className: "nav-item" },
+                'li',
+                { className: 'nav-item' },
                 _react2.default.createElement(
-                  "a",
-                  { className: "nav-link disabled", href: "#" },
-                  "Disabled"
+                  'a',
+                  { className: 'nav-link disabled', href: '#' },
+                  'Disabled'
                 )
               )
             )
@@ -36303,52 +36305,9 @@ var Header = exports.Header = function (_React$Component) {
 
 /***/ }),
 /* 38 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Footer = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Footer = exports.Footer = function (_React$Component) {
-    _inherits(Footer, _React$Component);
-
-    function Footer() {
-        _classCallCheck(this, Footer);
-
-        return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
-    }
-
-    _createClass(Footer, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                null,
-                'footer'
-            );
-        }
-    }]);
-
-    return Footer;
-}(_react2.default.Component);
+throw new Error("Module build failed: SyntaxError: Expected corresponding JSX closing tag for <input> (11:8)\n\n\u001b[0m \u001b[90m  9 | \u001b[39m    \u001b[33m<\u001b[39m\u001b[33minput\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"form-control mr-sm-2\"\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"search\"\u001b[39m placeholder\u001b[33m=\u001b[39m\u001b[32m\"Search\"\u001b[39m aria\u001b[33m-\u001b[39mlabel\u001b[33m=\u001b[39m\u001b[32m\"Search\"\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 10 | \u001b[39m    \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"btn btn-outline-success my-2 my-sm-0\"\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"submit\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mSearch\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m        \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mnav\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m    | \u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\n \u001b[90m 13 | \u001b[39m            )\u001b[33m;\u001b[39m  \n \u001b[90m 14 | \u001b[39m    }\u001b[0m\n");
 
 /***/ })
 /******/ ]);
