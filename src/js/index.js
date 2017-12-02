@@ -2,11 +2,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// BOOTSTRAP & JQUERY
+// BOOTSTRAP & JQUERY 
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
-import '../src/css/component/styles.scss';
+
+// CSS STYLE 
+import '../css/styles.scss';
 
 // COMPONENTS
 import {Layout} from './components/Layout.jsx';

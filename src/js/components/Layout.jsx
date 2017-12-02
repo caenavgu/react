@@ -1,9 +1,10 @@
 import React from 'react';
 
-import {Navbar} from './Header.jsx';
+import {Navbar} from './Navbar.jsx';
 import {Searchbar} from './Searchbar';
-import {Carousel} from './Searchbar';
-import {Showcase} from './Searchbar';
+import {Carousel} from './Carousel';
+import {Showcase} from './Showcase';
+import {Productscard} from './Productscard';
 
 
 export class Layout extends React.Component{
@@ -13,6 +14,9 @@ export class Layout extends React.Component{
             <div>
                 <Searchbar />
                 <Navbar />
+                <Carousel />
+                <Showcase >
+                </Showcase>
             </div>
             );
     }
