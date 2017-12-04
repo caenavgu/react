@@ -15,8 +15,7 @@ export class Layout extends React.Component{
                 <Searchbar />
                 <Navbar />
                 <Carousel />
-                <Showcase >
-                </Showcase>
+                <Showcase />
             </div>
             );
     }
