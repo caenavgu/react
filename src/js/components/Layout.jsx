@@ -1,15 +1,21 @@
 import React from 'react';
 
-import {Header} from './Header.jsx';
-import {Footer} from './Footer.jsx';
+import {Navbar} from './Navbar.jsx';
+import {Searchbar} from './Searchbar';
+import {Carousel} from './Carousel';
+import {Showcase} from './Showcase';
+import {Productscard} from './Productscard';
+
 
 export class Layout extends React.Component{
     
     render(){
         return(
             <div>
-                <Header />
-                <Footer />
+                <Searchbar />
+                <Navbar />
+                <Carousel />
+                <Showcase />
             </div>
             );
     }
