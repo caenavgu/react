@@ -13,20 +13,15 @@ export class Navbar extends React.Component{
                 
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                      <li className="nav-item active">
-                        <a className="nav-link" href="/categories">Categories<span className="sr-only">(current)</span></a>
+                      <li className="nav-item dropdown">
+                        <a className="nav-link dropdown-toggle" href="/categories" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Categories
+                        </a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/bestsellers">Best Sellers</a>
-                      </li>
-                      <li className="cart">
-                        <a className="cart-link" href="/cart">
-                        <span class="glyphicon glyphicon-shopping-cart"></span></a>
-                      </li>
-                      <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown HereZ
-                        </a>
+                      </li><li className="nav-item">
+                        <a className="nav-link" href="/bestsellers">Shopping Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                       </li>
                     </ul>
                   </div>
