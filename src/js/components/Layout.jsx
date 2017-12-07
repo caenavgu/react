@@ -18,9 +18,8 @@ export class Layout extends React.Component{
             <div>
                 <BrowserRouter> 
                     <div>
-                        <Navbar />
+                        <Searchbar />
                             <Switch>
-                                <Route exact path='/' component={Searchbar} />
                                 <Route exact path='/' component={Navbar} />
                                 <Route exact path='/' component={Carousel} />
                                 <Route exact path='/' component={Layout} />
