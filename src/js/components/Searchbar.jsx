@@ -12,6 +12,9 @@ export class Searchbar extends React.Component{
                 <input className="form-control col-5" type="search" placeholder="Search" aria-label="Search" />
                 <button className="btn btn-success" type="submit"><i className="fa fa-search" aria-hidden="true"></i></button>
                 <button className="btn btn-success" id='c' type="submit">LOGIN</button>
+                
+                
+                
             </nav>
             );  
     }
