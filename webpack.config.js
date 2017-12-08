@@ -24,6 +24,7 @@ module.exports = {
         { test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/, use: ['file-loader'] } //for fonts
     ]
   },
+  
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
