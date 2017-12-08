@@ -20,11 +20,11 @@ export class Layout extends React.Component{
                     <div>
                         <Searchbar />
                             <Switch>
-                                <Route exact path='/' component={Navbar} />
-                                <Route exact path='/' component={Carousel} />
-                                <Route exact path='/' component={Layout} />
-                                <Route render={() => <p className="text-center mt-5">Not found</p>} />
+                                <Route render={() => <p className="text-center mt-5">Centered Text</p>} />
                             </Switch>
+                        <Navbar />
+                        <Carousel />
+                        <Showcase />
                     </div>
                 </BrowserRouter> 
             </div>
