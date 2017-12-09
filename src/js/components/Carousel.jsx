@@ -13,13 +13,13 @@ export class Carousel extends React.Component{
   </ol>
   <div className="carousel-inner" role="listbox">
     <div className="carousel-item active">
-      <img className="d-block img-fluid" src="/src/img/shirt-1.png" alt="First slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/shirt-1.png" alt="Shirt Sale" />
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid" src="https://hiringsolved.com/blog/assets/iphone-developer-developer.jpg" alt="Second slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/mug-1.png" alt="World's Best Mug Everrrr" />
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid" src="https://www.mautic.org/wp-content/uploads/2015/12/mautic_developer_mautician.jpg" alt="Third slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/bump-1.png" alt="bumper stickers" />
     </div>
   </div>
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

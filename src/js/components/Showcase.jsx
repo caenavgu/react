@@ -7,10 +7,6 @@ export class Showcase extends React.Component{
         return(
             <div >
                 <Productscard/>
-                <Productscard/>
-                <Productscard/>
-                <Productscard/>
-                <Productscard/>
             </div>
             );
     }
