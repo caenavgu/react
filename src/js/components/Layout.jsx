@@ -5,8 +5,8 @@ import {Searchbar} from './Searchbar.jsx';
 import {Navbar} from './Navbar.jsx';
 import {Carousel} from './Carousel.jsx';
 import {Showcase} from './Showcase.jsx';
-// import {Carousel} from './Carousel';
-// import {Showcase} from './Showcase';
+import {Promotion} from './Promotion.jsx';
+import {CategoryArea} from './CategoryArea.jsx';
 // import {Productscard} from './Productscard';
 
 
@@ -25,6 +25,8 @@ export class Layout extends React.Component{
                         <Navbar />
                         <Carousel />
                         <Showcase />
+                        <Promotion/>
+                        <CategoryArea/>
                     </div>
                 </BrowserRouter> 
             </div>
