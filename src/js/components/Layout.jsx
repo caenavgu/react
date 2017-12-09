@@ -7,7 +7,7 @@ import {Carousel} from './Carousel.jsx';
 import {Showcase} from './Showcase.jsx';
 import {Promotion} from './Promotion.jsx';
 import {CategoryArea} from './CategoryArea.jsx';
-// import {Productscard} from './Productscard';
+import {HorizontalCard} from './HorizontalCard';
 
 
 export class Layout extends React.Component{
@@ -27,6 +27,7 @@ export class Layout extends React.Component{
                         <Showcase />
                         <Promotion/>
                         <CategoryArea/>
+                        <HorizontalCard/>
                     </div>
                 </BrowserRouter> 
             </div>
