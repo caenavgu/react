@@ -17,10 +17,10 @@ export class Carousel extends React.Component{
       <img className="d-block img-fluid" src="/src/img/shirt-1.png" alt="First slide" />
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid" src="https://hiringsolved.com/blog/assets/iphone-developer-developer.jpg" alt="Second slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/mug-1.png" alt="Second slide" />
     </div>
     <div className="carousel-item">
-      <img className="d-block img-fluid" src="https://www.mautic.org/wp-content/uploads/2015/12/mautic_developer_mautician.jpg" alt="Third slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/bump-1.png" alt="Third slide" />
     </div>
   </div>
   <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
