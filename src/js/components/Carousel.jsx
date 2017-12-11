@@ -4,6 +4,7 @@ export class Carousel extends React.Component{
     
     render(){
         return(
+<div class="container-fluid">
   
   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" size="small">
   <ol className="carousel-indicators">
@@ -30,6 +31,7 @@ export class Carousel extends React.Component{
     <span className="carousel-control-next-icon" aria-hidden="true"></span>
     <span className="sr-only">Next</span>
   </a>
+</div>
 </div>
              );
     }

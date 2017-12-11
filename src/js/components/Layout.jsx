@@ -19,9 +19,6 @@ export class Layout extends React.Component{
                 <BrowserRouter> 
                     <div>
                         <Searchbar />
-                            <Switch>
-                                <Route render={() => <p className="text-center mt-5">Centered Text</p>} />
-                            </Switch>
                         <Navbar />
                         <Carousel />
                         <Showcase />
