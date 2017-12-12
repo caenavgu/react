@@ -12,7 +12,7 @@ export class Searchbar extends React.Component{
                     <div className="input-group">
                         <input type="text" className="form-control" placeholder="Product name" aria-label="Product name"/>
                         <span className="input-group-btn">
-                            <button className="btn btn-success" type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                            <button className="btn btn-success" type="button"> <i className="fa fa-search" aria-hidden="true"></i> </button>
                         </span>
                     </div>
                   </div>

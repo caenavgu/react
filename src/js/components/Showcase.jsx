@@ -5,7 +5,7 @@ export class Showcase extends React.Component{
     
     render(){
         return(
-            <div class="container-fluid">
+            <div className="container-fluid">
             <div >
                 <Productscard/>
             </div>

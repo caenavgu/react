@@ -4,11 +4,11 @@ export class Carousel extends React.Component{
     
     render(){
         return(
-<div class="container-fluid">
+<div className="container-fluid">
   
   <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" size="small">
   <ol className="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>

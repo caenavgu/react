@@ -11,73 +11,66 @@ export class CategoryArea extends React.Component{
     <a className="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">On Sale </a>
     <a className="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Gifts Under 50 </a>
   </nav>
+  
   <div className="tab-content" id="nav-tabContent">
   
   <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
     <div className='row'>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
       <div className='col-2 card' id='productSmall' style={{padding: 0}}>
-        <img class="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
-        <div class="card-body">
-          <p class="card-text">productName.</p>
-          <p class="card-text">productPrice</p>
+        <img className="card-img-top" src="http://lorempixel.com/150/150/technics/" alt="Card image cap"/>
+        <div className="card-body">
+          <p className="card-text">productName.</p>
+          <p className="card-text">productPrice</p>
         </div>
       </div>
-      
+   
       <div className='row'>
-        <button type="button" class="btn btn-warning float-right">Warning</button>
+        <button type="button" className="btn btn-warning float-right">Warning</button>
       </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">..2.
-  <button type="button" class="btn btn-warning float-right">Warning</button>
+  <button type="button" className="btn btn-warning float-right">Warning</button>
   </div>
   <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">..3.
-  <button type="button" class="btn btn-warning float-right">Warning</button>
+  <button type="button" className="btn btn-warning float-right">Warning</button>
   </div>
   
   </div>

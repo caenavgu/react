@@ -20,7 +20,7 @@ export class Navbar extends React.Component{
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="/bestsellers">Best Sellers</a>
-                      </li><li className="nav-item">
+                      </li>1<li className="nav-item">
                         <a className="nav-link" href="/bestsellers">Shopping Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i></a>
                       </li>
                     </ul>
