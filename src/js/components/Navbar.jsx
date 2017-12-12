@@ -11,25 +11,26 @@ export class Navbar extends React.Component{
        super();
        
        this.theMenu = [
-       this.addItem = ('Categories','/categories', [
-         this.addLink('shirts','/categories/shirts'),
-         this.addLink('mugs','/categories/mugs'),
-         this.addLink('bumperstickers','/categories/bumperstickers')
-         ]),
-      {/* this.addItem = ('BestSellers','/bestsellers'),
-       this.addItem = ('ShoppingCart','/shoppingcart'),*/}
+         this.addItem('hello','/bestsellers'),
+         this.addItem('Categories','/categories', [
+           this.addLink('shirts','/categories/shirts'),
+           this.addLink('mugs','/categories/mugs'),
+           this.addLink('bumperstickers','/categories/bumperstickers')
+           ]),
+        this.addItem('BestSellers','/bestsellers'),
+        this.addItem('ShoppingCart','/shoppingcart')
          ];
     }
     
-    addItem(itemName, itemURL, itemLinks=null){
+    addItem(itemName, itemURL, itemLinks =null){
       
       return {
         label: itemName,
         url: itemURL,
-        links: itemLinks
+        links: itemLinks 
       }
     }
-      addlink(linkName, linkURL){
+      addLink(linkName, linkURL){
         
         return {
           label: linkName,
@@ -48,16 +49,7 @@ export class Navbar extends React.Component{
                 
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                      <li className="nav-item dropdown">
-                        <a className="nav-link dropdown-toggle" href="/categories" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Categories
-                        </a>
-                      </li>
-                      <li className="nav-item">
-                        <a className="nav-link" href="/bestsellers">Best Sellers</a>
-                      </li>1<li className="nav-item">
-                        <a className="nav-link" href="/bestsellers">Shopping Cart <i className="fa fa-shopping-cart" aria-hidden="true"></i></a>
-                      </li>
+                      {this.renderMenu(this.theMenu)}
                     </ul>
                   </div>
                 </nav>
@@ -65,8 +57,25 @@ export class Navbar extends React.Component{
             );
     }
   
-    renderNavItem(navItemData)
-    {
+  
+  /*Functions*/
+  renderMenu(menuData){
+    var items = menuData.map((item) =>{
+          return this.renderNavItemData(item);
+    });
+    console.log("The Menu Data",items)
+    return items;
+  }
+  
+  renderNavItemData(navItemData){
+    if(navItemData.links != null){ 
+      return this.renderLikeADropDown(navItemData);}
+      else{
+        return this.renderLikeALink(navItemData);
+        }
+    }
+  
+    renderLikeADropDown(navItemData){
       
     var links = navItemData.links.map(function(link){
       return <a key={link.url} className="dropdown-item" href={link.url}>{link.label}</a>;
@@ -80,5 +89,14 @@ export class Navbar extends React.Component{
                 {links}
               </div>
             </li>);
+  }
+  
+  renderLikeALink(navItemData){
+    return (<li className="nav-item">
+              <a className="nav-link" href="#">
+                {navItemData.label}
+              </a>
+            </li>
+            );
   }
 };
