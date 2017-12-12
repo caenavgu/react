@@ -14,7 +14,7 @@ export class Carousel extends React.Component{
   </ol>
   <div className="carousel-inner" role="listbox">
     <div className="carousel-item active">
-      <img className="d-block img-fluid" src="/src/img/shirt-1.png" alt="First slide" />
+      <img className="d-block img-fluid" src="/src/img/homeCarousel/shirt-1.png" alt="First slide" />
     </div>
     <div className="carousel-item">
       <img className="d-block img-fluid" src="/src/img/homeCarousel/mug-1.png" alt="Second slide" />
