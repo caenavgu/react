@@ -2,7 +2,42 @@ import React from 'react';
 
 export class Navbar extends React.Component{
     
-    render(){
+
+        
+        
+        
+    constructor() {
+      
+       super();
+       
+       this.theMenu = [
+       this.addItem = ('Categories','/categories', [
+         this.addLink('shirts','/categories/shirts'),
+         this.addLink('mugs','/categories/mugs'),
+         this.addLink('bumperstickers','/categories/bumperstickers')
+         ]),
+      {/* this.addItem = ('BestSellers','/bestsellers'),
+       this.addItem = ('ShoppingCart','/shoppingcart'),*/}
+         ];
+    }
+    
+    addItem(itemName, itemURL, itemLinks=null){
+      
+      return {
+        label: itemName,
+        url: itemURL,
+        links: itemLinks
+      }
+    }
+      addlink(linkName, linkURL){
+        
+        return {
+          label: linkName,
+          url: linkURL
+        }
+      }
+      
+    render() {
         return(
             <div className='header'>
                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,8 +62,23 @@ export class Navbar extends React.Component{
                   </div>
                 </nav>
             </div>
-            
             );
     }
+  
+    renderNavItem(navItemData)
+    {
+      
+    var links = navItemData.links.map(function(link){
+      return <a key={link.url} className="dropdown-item" href={link.url}>{link.label}</a>;
+    });
     
-}
+    return (<li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {navItemData.label}
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                {links}
+              </div>
+            </li>);
+  }
+};
