@@ -1,8 +1,7 @@
 import React from 'react';
 
-
 export class Productscard extends React.Component{
-    
+  
     render(){
         return(
 <div className="card-deck">
