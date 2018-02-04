@@ -4,20 +4,34 @@ export class Searchbar extends React.Component{
     
     render(){
         return(
-            <nav className="navbar bg-light ">
-                <div className="media">
-                    <img className="m" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yin_yang.svg/1200px-Yin_yang.svg.png" alt="Generic placeholder image" height="42" width="42" />
+            <div>
+            
+            <nav className="navbar bg-light col-lg-12 row mt-3">
+            
+                <div className="col-lg-2">
+                    <a href="/"><img className="m" src="src/img/primary/devshui-logo.jpg" alt="Generic placeholder image" width="200"/></a>
                 </div>
+                
                   <div className="col-lg-6">
-                    <div className="input-group">
-                        <input type="text" className="form-control" placeholder="Product name" aria-label="Product name"/>
-                        <span className="input-group-btn">
-                            <button className="btn btn-success" type="button"> <i className="fa fa-search" aria-hidden="true"></i> </button>
-                        </span>
-                    </div>
+                    <input type="text" className="form-control" placeholder="Find something awesome here!" aria-label="Product name"/>
                   </div>
-                <button className="btn btn-outline-info" id='c' type="submit">LOGIN</button>
+
+                  <div className="col-lg-1">
+                            <button className="btn btn-success" type="button"><i className="fa fa-search" aria-hidden="true"></i></button>
+                  </div>
+
+                  <div className="col-lg-1">
+                            <i class="fas fa-shopping-cart"></i>
+                  </div>
+
+                  <div className="col-lg-2">
+        
+                        <button className="btn btn-outline-info pull-right" id='c' type="submit"><a href="/Profile">LOGIN</a></button><br />
+                        <a class="btn pull-right" href="/NewUser">New? Start here.</a>
+                  </div>
+                          
             </nav>
+            </div>
             );  
     }
     

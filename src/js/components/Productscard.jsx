@@ -14,11 +14,12 @@ export class Productscard extends React.Component{
     </div>
   </div>
   <div className="card">
-    <img className="card-img-top" src="/src/img/homeProducts/product-shirt-bsod.png" alt="Card image cap" />
+    <a href="/Product"><img className="card-img-top" src="/src/img/homeProducts/product-shirt-bsod.png" alt="Card image cap" /></a>
     <div className="card-block">
       <h4 className="card-title">Blue Shirt of Death</h4>
       <p className="card-text">This shirt is only available in blue.</p>
       <p className="card-text"><small className="text-muted">Limited run!</small></p>
+      <p className="card-text"><a href="/Product">Learn More</a></p>
     </div>
   </div>
   <div className="card">
