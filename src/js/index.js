@@ -6,7 +6,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 
-import fontAwesome from 'font-awesome/scss/font-awesome.scss';
+require("font-awesome-webpack");
 
 // CSS STYLE 
 import '../css/styles.scss';
