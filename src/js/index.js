@@ -12,6 +12,6 @@ require("font-awesome-webpack");
 import '../css/styles.scss';
 
 // COMPONENTS
-import {Layout} from './components/Layout.jsx';
+import {Layout} from './Layout.jsx';
 
 ReactDOM.render(<Layout />,document.getElementById('app'));
