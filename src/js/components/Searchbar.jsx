@@ -4,33 +4,49 @@ export class Searchbar extends React.Component{
     
     render(){
         return(
+            
             <div>
-            
-            <nav className="navbar bg-light col-lg-12 row mt-3">
-            
-                <div className="col-lg-2">
-                    <a href="/"><img className="m" src="src/img/primary/devshui-logo.jpg" alt="Generic placeholder image" width="200"/></a>
+            {/*<nav className="navbar bg-light container"></nav>*/}
+
+            <div className="row">
+                <div className="col-12 col-offset-2 text-center">
+                    <a href="/"><img src="src/img/primary/devshui-logo.jpg" alt="Generic placeholder image"/></a>
                 </div>
-                
-                  <div className="col-lg-6">
-                    <input type="text" className="form-control" placeholder="Find something awesome here!" aria-label="Product name"/>
-                  </div>
-
-                  <div className="col-lg-1">
-                            <button className="btn btn-success" type="button"><i className="fa fa-search" aria-hidden="true"></i></button>
-                  </div>
-
-                  <div className="col-lg-1">
+            </div>
+            {/*<div class="container">
+            <div class="span12">           
+                    <input type="text" className="form-control8" placeholder="Find something awesome here!" aria-label="Product name"/>
+                    <button className="btn btn-success col-2" type="button"><i className="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+            </div>*/}
+            
+            <form class="form-inline">
+  {/*<div class="form-group mb-2">
+    <label for="staticEmail2" class="sr-only">Email</label>
+    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com" />
+  </div>*/}
+  <div class="form-group mx-sm-8 mb-2">
+    <label for="inputPassword2" class="sr-only">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Find something awesome here!" />
+  </div>
+  <button type="submit" class="btn btn-primary mb-2"><i className="fa fa-search" aria-hidden="true"></i></button>
+</form>
+            
+            
+            
+            <div class="container">
+            <div class="span12">
                             <i class="fas fa-shopping-cart"></i>
                   </div>
+                  </div>
+                  
 
-                  <div className="col-lg-2">
+                  {/*<div className="col-2">
         
                         <button className="btn btn-outline-info pull-right" id='c' type="submit"><a href="/Profile">LOGIN</a></button><br />
                         <a class="btn pull-right" href="/NewUser">New? Start here.</a>
-                  </div>
+                  </div>*/}
                           
-            </nav>
             </div>
             );  
     }
