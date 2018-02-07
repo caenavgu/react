@@ -4,6 +4,7 @@ import {Home} from './Home';
 import {Profile} from './Profile1';
 import {NewUser} from './newuser';
 import {Product} from './Product';
+import {searchresults} from './searchresults';
 
 export class Layout extends React.Component{
     
@@ -18,6 +19,7 @@ export class Layout extends React.Component{
                         <Route exact path='/profile' component={Profile} />
                         <Route exact path='/newuser' component={NewUser} />
                         <Route exact path='/Product' component={Product} />
+                        <Route exact path='/searchresults' component={searchresults} />
                     </div>
                 </BrowserRouter> 
             </div>

@@ -28,6 +28,7 @@ export class Navbar extends React.Component {
       links: itemLinks
     }
   }
+  
   addLink(linkName, linkURL){
     
     return {
