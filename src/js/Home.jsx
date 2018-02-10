@@ -14,13 +14,11 @@ export class Home extends React.Component{
         
         return(
             <div>
-            <Searchbar />
-            <Navbar />
-            <Carousel />
-            <Showcase />    
-            <Promotion/>
-            <CategoryArea/>
-            <HorizontalCard/>
+                <Carousel />
+                <Showcase />    
+                <Promotion/>
+                <CategoryArea/>
+                <HorizontalCard/>
             </div>
             );
     }

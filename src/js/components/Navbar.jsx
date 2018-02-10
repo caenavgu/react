@@ -2,37 +2,35 @@ import React from 'react';
 
 export class Navbar extends React.Component{
     
+constructor (props){
+   
+   super();
 
-        
-        
-        
-    constructor() {
-      
-       super();
-       
        this.theMenu = [
-         this.addItem('Selling Like Hotcakes!','/bestsellers'),
-         this.addItem('Categories','/categories', [
-           this.addLink('Shirts','/categories/shirts'),
-           this.addLink('Mugs','/categories/mugs'),
-           this.addLink('Bumper Stickers','/categories/bumperstickers')
+         this.addItem('Selling Like Hotcakes!','/bestsellers',1),
+         this.addItem('Categories','/categories',2 [
+           this.addLink('Shirts','/categories/shirts',3),
+           this.addLink('Mugs','/categories/mugs',4),
+           this.addLink('Bumper Stickers','/categories/bumperstickers', 5)
            ]),
-        this.addItem('BestSellers','/bestsellers'),
-        this.addItem('ShoppingCart','/shoppingcart')
+        this.addItem('BestSellers','/bestsellers', 6),
+        this.addItem('ShoppingCart','/shoppingcart', 7)
          ];
     }
     
-    addItem(itemName, itemURL, itemLinks =null){
+    addItem(itemName, itemURL, key, itemLinks =null){
       
       return {
+        key: key,
         label: itemName,
         url: itemURL,
         links: itemLinks 
       }
     }
-      addLink(linkName, linkURL){
+      addLink(linkName, linkURL, key){
         
         return {
+          key: key,
           label: linkName,
           url: linkURL
         }
@@ -76,12 +74,12 @@ export class Navbar extends React.Component{
     }
   
     renderLikeADropDown(navItemData){
-      
-    var links = navItemData.links.map(function(link){
-      return <a key={link.url} className="dropdown-item" href={link.url}>{link.label}</a>;
+
+    var links = navItemData.links.map(function(link, index){
+        return <a key={index} className="dropdown-item" href={link.url}>{link.label}</a>;
     });
     
-    return (<li className="nav-item dropdown">
+    return (<li key={navItemData.key} className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {navItemData.label}
               </a>
@@ -92,7 +90,7 @@ export class Navbar extends React.Component{
   }
   
   renderLikeALink(navItemData){
-    return (<li className="nav-item">
+    return (<li key={navItemData.key} className="nav-item">
               <a className="nav-link" href="#">
                 {navItemData.label}
               </a>

@@ -1,6 +1,4 @@
 import React from 'react';
-import {Searchbar} from './components/Searchbar.jsx';
-import {Navbar} from './components/Navbar.jsx';
 
 export class Product extends React.Component{
     
@@ -12,9 +10,6 @@ constructor () {
         
         return(
                     <div>    
-                        <Searchbar />
-                        <Navbar />
-                        
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-6">

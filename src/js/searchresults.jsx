@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {Searchbar} from './components/Searchbar.jsx';
-import {Navbar} from './components/Navbar.jsx';
 
 export class searchresults extends React.Component{
     
@@ -13,9 +11,6 @@ constructor () {
         
         return(
                     <div>    
-                        <Searchbar />
-                        <Navbar />
-                        
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-4">

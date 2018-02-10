@@ -12,8 +12,6 @@ constructor () {
         
         return(
                     <div>    
-                        <Searchbar />
-                        <Navbar />
                             <div className="container">
                                     <div>
                                         <img src="src/img/profile/profile-view.png" alt="Generic placeholder image" width="200" />
