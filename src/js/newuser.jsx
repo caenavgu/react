@@ -12,7 +12,7 @@ constructor () {
                 <div ng-controller="myCtrl" id="fullscreen_bg" className="fullscreen_bg"/>
                     <div id="regContainer" className="container">
                           <div className="row">
-                          <div className="col-md-6 col-md-offset-3">
+                          <div className="col-md-6 col-md-offset-6">
                             <div className="panel panel-login">
                               <div className="panel-heading">
                                 <div className="row">
@@ -20,7 +20,7 @@ constructor () {
                                     <a href="#" className="active" id="login-form-link">Login</a>
                                   </div>
                                   <div className="col-xs-6">
-                                    <a href="#" id="register-form-link">Register</a>
+                                    <a href="#" id="register-form-link">Registerz</a>
                                   </div>
                                 </div>
                                 <hr />
