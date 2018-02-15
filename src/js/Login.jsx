@@ -2,7 +2,7 @@ import React from 'react';
 import * as mainActions from './actions/mainActions.js'
 import MainStore from  './stores/mainStore.js'
 
-export class NewUser extends React.Component{
+export class Login extends React.Component{
     
     constructor() {
         super();
@@ -10,7 +10,6 @@ export class NewUser extends React.Component{
         this.state = {
             username: '',
             password: '',
-            passwordconfirmation: '',
             loggingIn: null
         }
     }
@@ -34,7 +33,7 @@ export class NewUser extends React.Component{
       
       var sessionInfo = MainStore.getSessionInfo();
       if(sessionInfo == true){
-        this.props.history.push('/');
+        this.props.history.push('/profile');
       }
       else
       {
@@ -54,7 +53,7 @@ export class NewUser extends React.Component{
                               <div className="panel-heading">
                                 <div className="row">
                                   <div className="col-12">
-                                    <a href="#" className="active" id="login-form-link">Register</a>
+                                    <a href="#" className="active" id="login-form-link">Login</a>
                                   </div>
                                 </div>
                                 <hr />
@@ -63,27 +62,25 @@ export class NewUser extends React.Component{
                                 <div className="row">
                                   <div className="col-lg-12">
                                     {(this.state.loggingIn == false) ?
-                                    <div className="alert alert-danger">Need some help?</div>
+                                    <div className="alert alert-danger"> Error asshole! </div>
                                     : ''}
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group">
-                                        <label htmlFor="username" className="col-10 mx-auto">Email</label>
+                                        <label htmlFor="username">Username / Email</label>
                                         <input ng-model="newName" type="text" name="username" id="username" tabIndex="1" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
                                       </div>
                                       <div className="form-group">
-                                        <label htmlFor="password1" className="col-10 mx-auto">Password</label>
+                                        <label htmlFor="password1">Password</label>
                                         <input type="password" name="password" id="password" tabIndex="2" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
-                                      </div>
-                                      <div className="form-group">
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Confirm password" value={this.state.password} />
                                       </div>
                                       <div className="form-group text-center">
                                         <input type="checkbox" tabIndex="3" className="" name="remember" id="remember" />
                                         <label htmlFor="remember"> Remember Me</label>
+
                                         <div className="form-group">
                                         <div className="row">
                                           <div className="col-10 mx-auto">
-                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Register" />
+                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Log In" />
                                           </div>
                                         </div>
                                       </div>
