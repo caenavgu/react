@@ -62,8 +62,8 @@ export class Login extends React.Component{
                                 <div className="row">
                                   <div className="col-lg-12">
                                     {(this.state.loggingIn == false) ?
-                                    <div className="alert alert-danger"> Error asshole! </div>
-                                    : ''}
+                                      <div className="alert alert-danger"> Error asshole! </div> : ''
+                                    }
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group">
                                         <label htmlFor="username">Username / Email</label>
