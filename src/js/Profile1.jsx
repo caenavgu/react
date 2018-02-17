@@ -4,9 +4,10 @@ import {Navbar} from './components/Navbar.jsx';
 
 export class Profile extends React.Component{
     
-constructor () {
-    super ()
-}
+    constructor() {
+        super();
+        
+    }
     
     render(){
         
@@ -14,7 +15,7 @@ constructor () {
                     
                     <div>
                     
-                     {(this.state.loggingIn == false) ?
+                     {(this.props.loggingIn == true) ?
                                                     <div className="container">
                                     <div className="col-4 mx-auto">
                                         <img src="src/img/profile/profile-view.png" alt="Generic placeholder image" width="200" />

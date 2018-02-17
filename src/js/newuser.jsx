@@ -46,7 +46,7 @@ export class NewUser extends React.Component{
 
         return (
        <div>
-                <div ng-controller="myCtrl" id="fullscreen_bg" className="fullscreen_bg"/>
+                <div/>
                     <div id="regContainer" className="container">
                           <div className="row">
                           <div className="col-md-6 col-md-offset-6 mx-auto">
@@ -66,22 +66,22 @@ export class NewUser extends React.Component{
                                     <div className="alert alert-danger">Need some help?</div>
                                     : ''}
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
-                                      <div className="form-group">
-                                        <label htmlFor="username" className="col-10 mx-auto">Your Name</label>
-                                        <input ng-model="Name" type="text" name="name" id="username" tabIndex="1" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="name" value={this.state.name} />
+                                      <div className="form-group col-10 mx-auto">
+                                        <label htmlFor="username">Your Name</label>
+                                        <input ng-model="Name" type="text" name="name" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="name" value={this.state.name} />
                                       </div>
-                                      <div className="form-group">
-                                        <label htmlFor="username" className="col-10 mx-auto">Email</label>
-                                        <input ng-model="newName" type="text" name="email" id="username" tabIndex="1" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
+                                      <div className="form-group col-10 mx-auto">
+                                        <label htmlFor="username">Email</label>
+                                        <input ng-model="newName" type="text" name="email" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
                                       </div>
-                                      <div className="form-group">
-                                        <label htmlFor="password1" className="col-10 mx-auto">Password</label>
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
+                                      <div className="form-group col-10 mx-auto">
+                                        <label htmlFor="password1">Password</label>
+                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
                                       </div>
-                                      <div className="form-group">
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Confirm password" value={this.state.password} />
+                                      <div className="form-group col-10 mx-auto">
+                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Confirm password" value={this.state.password} />
                                       </div>
-                                      <div className="form-group text-center">
+                                      <div className="form-group col-10 mx-auto">
                                         <input type="checkbox" tabIndex="3" className="" name="remember" id="remember" />
                                         <label htmlFor="remember"> Remember Me</label>
                                         <div className="form-group">
@@ -89,6 +89,10 @@ export class NewUser extends React.Component{
                                           <div className="col-10 mx-auto">
                                             <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Register" />
                                           </div>
+                                        </div>
+                                        <div className="row">
+                                          <div className="col-10 mx-auto">
+                                            <label htmlFor="username">Already have an account? <Link to="/Login"><p>Login here!</p></Link></label>                                          </div>
                                         </div>
                                       </div>
                                         
