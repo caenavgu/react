@@ -58,8 +58,8 @@ constructor (props){
   
   /*Functions*/
   renderMenu(menuData){
-    var items = menuData.map((item) =>{
-          return this.renderNavItemData(item);
+    var items = menuData.map((item, i) =>{
+          return this.renderNavItemData(item,i);
     });
     console.log("The Menu Data",items)
     return items;
@@ -91,7 +91,7 @@ constructor (props){
   
   renderLikeALink(navItemData){
     return (<li key={navItemData.key} className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#" >
                 {navItemData.label}
               </a>
             </li>
