@@ -1,36 +1,42 @@
+/*
+*   Modules dependencies
+*/
 import React from 'react';
 
+
 export class Productscard extends React.Component{
-  
-    render(){
-        return(
-<div className="card-deck">
-  <div className="card">
-    <img className="card-img-top" src="/src/img/homeProducts/product-shirt-panda.png" alt="Card image cap" />
-    <div className="card-block">
-      <h4 className="card-title">HOT AF PANDA SHIRT 1</h4>
-      <p className="card-text">Panda, panda: you're ready for anything when you wear this limited edition, super awesome tee.</p>
-      <p className="card-text"><small className="text-muted">Natural swag.</small></p>
-    </div>
-  </div>
-  <div className="card">
-    <a href="/Product"><img className="card-img-top" src="/src/img/homeProducts/product-shirt-bsod.png" alt="Card image cap" /></a>
-    <div className="card-block">
-      <h4 className="card-title">Blue Shirt of Death</h4>
-      <p className="card-text">This shirt is only available in blue.</p>
-      <p className="card-text"><small className="text-muted">Limited run!</small></p>
-      <p className="card-text"><a href="/Product">Learn More</a></p>
-    </div>
-  </div>
-  <div className="card">
-    <img className="card-img-top" src="/src/img/homeProducts/product-shirt-password.png" alt="Card image cap" />
-    <div className="card-block">
-      <h4 className="card-title">Your Mom's Password...</h4>
-      <p className="card-text">No dev shirt before or since has started so many fights. Great way to get the night started!</p>
-      <p className="card-text"><small className="text-muted">Come at me, dev.</small></p>
-    </div>
-  </div>
-</div>
-                );
-                }
-            }
+    
+  constructor() {
+    super();
+    
+    this.state = {
+       products : [
+                  {URL:'/src/img/homeProducts/product-shirt-panda.png', titlle: 'pants', information: 'sfsdfasdflksdfjasd;lkadf', price: 100}, 
+                  {URL:'/src/img/homeProducts/product-shirt-bsod.png', titlle: 'shoes', information: 'sfsdfasdflkgfdsgsdfgsdfjasd;lkadf', price: 100},
+                  {URL:'/src/img/homeProducts/product-shirt-password.png', titlle: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
+                  {URL:'/src/img/homeProducts/product-shirt-password.png', titlle: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
+                  {URL:'/src/img/homeProducts/product-shirt-password.png', titlle: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100}
+                  ],
+    }
+  }
+
+  render(){
+    
+    const productsAsHTMLElemetns = this.state.products.map((product, i) => {
+      // expression goes here:
+      return (<div key={i} className="card">
+                <img className="card-img-top" src={product.URL} alt="Card image cap" />
+                <div className="card-block">
+                  <h4 className="card-title">{product.title}</h4>
+                  <p className="card-text">{product.information}</p>
+                  <p className="card-text"><small className="text-muted">Natural swag.</small></p>
+                </div>
+              </div>)
+      });
+    
+      return(
+          <div className="card-deck"> {productsAsHTMLElemetns} </div>
+      );
+      
+    }
+}
