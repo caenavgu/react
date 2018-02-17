@@ -1,6 +1,7 @@
 import React from 'react';
 import * as mainActions from './actions/mainActions.js'
 import MainStore from  './stores/mainStore.js'
+import { Link } from 'react-router-dom'
 
 export class Login extends React.Component{
     
@@ -37,7 +38,7 @@ export class Login extends React.Component{
       }
       else
       {
-        this.setState({ isLoggedIn: sessionInfo });
+        this.setState({ loggingIn: sessionInfo });
       }
     }
     
@@ -45,7 +46,7 @@ export class Login extends React.Component{
 
         return (
        <div>
-                <div ng-controller="myCtrl" id="fullscreen_bg" className="fullscreen_bg"/>
+                <div/>
                     <div id="regContainer" className="container">
                           <div className="row">
                           <div className="col-md-6 col-md-offset-6 mx-auto">
@@ -62,16 +63,21 @@ export class Login extends React.Component{
                                 <div className="row">
                                   <div className="col-lg-12">
                                     {(this.state.loggingIn == false) ?
+<<<<<<< HEAD
+                                    <div className="alert alert-danger">Error asshole!</div>
+                                    : ''}
+=======
                                       <div className="alert alert-danger"> Error asshole! </div> : ''
                                     }
+>>>>>>> 311253843465fd08653b76bbc8e42392a0314939
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
-                                      <div className="form-group">
+                                      <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Username / Email</label>
-                                        <input ng-model="newName" type="text" name="username" id="username" tabIndex="1" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
+                                        <input ng-model="newName" type="text" name="username" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
                                       </div>
-                                      <div className="form-group">
+                                      <div className="form-group col-10 mx-auto">
                                         <label htmlFor="password1">Password</label>
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control col-10 mx-auto" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
+                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
                                       </div>
                                       <div className="form-group text-center">
                                         <input type="checkbox" tabIndex="3" className="" name="remember" id="remember" />
@@ -84,8 +90,19 @@ export class Login extends React.Component{
                                           </div>
                                         </div>
                                       </div>
+                                      
+                                        <div className="form-group">
+                                        <div className="row">
+                                          <div className="col-10 mx-auto">
+                                            <Link to="/"><p>New? Register Here</p></Link>
+                                          </div>
+                                        </div>
+                                      </div>                                      
                                         
                                       </div>
+                                      
+                                      
+                                      
                                     </form>
                                   </div>
                                 </div>
