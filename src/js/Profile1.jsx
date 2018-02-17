@@ -11,9 +11,12 @@ constructor () {
     render(){
         
         return(
-                    <div>    
-                            <div className="container">
-                                    <div>
+                    
+                    <div>
+                    
+                     {(this.state.loggingIn == false) ?
+                                                    <div className="container">
+                                    <div className="col-4 mx-auto">
                                         <img src="src/img/profile/profile-view.png" alt="Generic placeholder image" width="200" />
                                             <h4><b>Colby Taylor</b></h4> 
                                             <p>Member since 2018</p> 
@@ -26,7 +29,10 @@ constructor () {
                                             <li>Edit Interests</li>
                                         </ul>
                                     </div>    
-                            </div>    
+                            </div>  
+                                    : <div className="alert alert-danger">You are not currently logged in. Login or register.</div>
+                                    }             
+  
                         </div>
             );
     }
