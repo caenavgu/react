@@ -13,10 +13,10 @@ constructor () {
             
                   <div className="container">
                     <div className="row">
-                        <div className="col-3 text-center">
+                        <div className="col-2 text-center">
                             <Link to="/"><img src="src/img/primary/devshui-logo.jpg" alt="DevShui Logo!"/></Link>
                         </div>
-                        <div className="col-4">
+                        <div className="col-5 mx-auto">
                             <div className="input-group">
                                 <div className="input-group-btn search-panel">
                                     <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -35,8 +35,10 @@ constructor () {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-1 text-center">
+                        <div className="col-2 text-center">
                             <Link to="/Login"><p>Login</p></Link>
+                        </div>
+                        <div className="col-2 text-center">
                             <Link to="/NewUser"><p>New? Register Here</p></Link>
                         </div>
     </div>

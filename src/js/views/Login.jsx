@@ -1,6 +1,6 @@
 import React from 'react';
-import * as mainActions from './actions/mainActions.js'
-import MainStore from  './stores/mainStore.js'
+import * as mainActions from '../actions/mainActions.js'
+import MainStore from  '../stores/mainStore.js'
 import { Link } from 'react-router-dom'
 
 export class Login extends React.Component{
@@ -63,13 +63,8 @@ export class Login extends React.Component{
                                 <div className="row">
                                   <div className="col-lg-12">
                                     {(this.state.loggingIn == false) ?
-<<<<<<< HEAD
                                     <div className="alert alert-danger">Error asshole!</div>
                                     : ''}
-=======
-                                      <div className="alert alert-danger"> Error asshole! </div> : ''
-                                    }
->>>>>>> 311253843465fd08653b76bbc8e42392a0314939
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Username / Email</label>

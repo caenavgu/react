@@ -1,6 +1,7 @@
 import React from 'react';
-import * as mainActions from './actions/mainActions.js'
-import MainStore from  './stores/mainStore.js'
+import * as mainActions from '../actions/mainActions.js';
+import MainStore from  '../stores/mainStore.js';
+import { Link } from 'react-router-dom'
 
 export class NewUser extends React.Component{
     
@@ -47,7 +48,7 @@ export class NewUser extends React.Component{
         return (
        <div>
                 <div/>
-                    <div id="regContainer" className="container">
+                    <div id="regContainer" className="container m-">
                           <div className="row">
                           <div className="col-md-6 col-md-offset-6 mx-auto">
                             <div className="panel panel-login">
@@ -95,7 +96,6 @@ export class NewUser extends React.Component{
                                             <label htmlFor="username">Already have an account? <Link to="/Login"><p>Login here!</p></Link></label>                                          </div>
                                         </div>
                                       </div>
-                                        
                                       </div>
                                     </form>
                                   </div>
