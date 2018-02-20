@@ -21,14 +21,14 @@ export class Carousel extends React.Component{
     
     const carouseIndicatorslAsHTMLElemetns = this.state.carouselPoster.map((cIndexPoster, i) => {
       // expression goes here:
-      return( <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i}></li>
+      return( <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={(i==0) ? "active":''} ></li>
       );
     });
     
     const carouselAsHTMLElemetns = this.state.carouselPoster.map((cPoster, index) => {
       // expression goes here:
       return( 
-        <div key={index} className="carousel-item">
+        <div key={index} className={(index==0) ? "carousel-item active":"carousel-item"}>
           <img className="d-block img-fluid" src={cPoster.URL} alt={index} />
         </div>
       );
