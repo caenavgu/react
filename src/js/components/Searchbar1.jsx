@@ -10,9 +10,8 @@ constructor () {
     
     render(){
         return(
-            
-                  <div className="container">
-                    <div className="row">
+            <div>
+                    <nav class="navbar navbar-dark bg-dark">
                         <div className="col-2 text-center">
                             <Link to="/"><img src="src/img/primary/devshui-logo.jpg" alt="DevShui Logo!"/></Link>
                         </div>
@@ -22,7 +21,7 @@ constructor () {
                                     <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                         <span id="search_concept">All <span className="glyphicon glyphicon-triangle-bottom" /></span><span className="caret"></span>
                                     </button>
-                                    <ul className="dropdown-menu" role="menu">
+                                    <ul className="dropdown-menu " role="menu">
                                       <li><a href="/Shirts">Shirts</a></li>
                                       <li><a href="/BumperStickers">Bumper Stickers</a></li>
                                       <li><a href="/CoffeeMugs">Coffee Mugs</a></li>
@@ -35,14 +34,40 @@ constructor () {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-2 text-center">
-                            <Link to="/Login"><p>Login</p></Link>
+                        <div className="col-2 text-center text-white">
+                            <Link to="/Login"><p className="text-white">Login</p></Link>
                         </div>
                         <div className="col-2 text-center">
-                            <Link to="/NewUser"><p>New? Register Here</p></Link>
-                        </div>
-    </div>
-</div>
+                            <Link to="/NewUser"><p className="text-white">New? Register Here</p></Link>
+                    </div>
+                </nav> 
+                
+            {/*<div className="container">    
+                <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a className="navbar-brand" href="#">Hidden brand</a>
+                    <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li className="nav-item active">
+                        <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Link</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form className="form-inline my-2 my-lg-0">
+                      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                  </div>
+                </nav>
+            </div>*/}
+            </div>
             );  
     }
     
