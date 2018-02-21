@@ -12,11 +12,11 @@ export class Productscard extends React.Component{
     
     this.state = {
        products : [
-                  {URL:'/src/img/homeProducts/product-shirt-panda.png', title: 'pants', information: 'sfsdfasdflksdfjasd;lkadf', price: 100}, 
-                  {URL:'/src/img/homeProducts/product-shirt-bsod.png', title: 'shoes', information: 'sfsdfasdflkgfdsgsdfgsdfjasd;lkadf', price: 100},
-                  {URL:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
-                  {URL:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
-                  {URL:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100}
+                  {URLImage:'/src/img/homeProducts/product-shirt-panda.png', title: 'pants', information: 'sfsdfasdflksdfjasd;lkadf', price: 100}, 
+                  {URLImage:'/src/img/homeProducts/product-shirt-bsod.png', title: 'shoes', information: 'sfsdfasdflkgfdsgsdfgsdfjasd;lkadf', price: 100},
+                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
+                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
+                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100}
                   ],
     }
   }
@@ -25,7 +25,7 @@ export class Productscard extends React.Component{
     
     const productsAsHTMLElemetns = this.state.products.map((product, i) => {
       // expression goes here:
-      return (<ProductItem key={i} data={product} />)
+      return (<ProductItem key={i} data={product} align={"center"}/>)
       });
     
       return(
