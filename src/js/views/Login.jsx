@@ -1,8 +1,9 @@
 import React from 'react';
-import * as mainActions from './actions/mainActions.js'
-import MainStore from  './stores/mainStore.js'
+import * as mainActions from '../actions/mainActions.js'
+import MainStore from  '../stores/mainStore.js'
+import { Link } from 'react-router-dom'
 
-export class NewUser extends React.Component{
+export class Login extends React.Component{
     
     constructor() {
         super();
@@ -10,7 +11,6 @@ export class NewUser extends React.Component{
         this.state = {
             username: '',
             password: '',
-            passwordconfirmation: '',
             loggingIn: null
         }
     }
@@ -34,11 +34,11 @@ export class NewUser extends React.Component{
       
       var sessionInfo = MainStore.getSessionInfo();
       if(sessionInfo == true){
-        this.props.history.push('/');
+        this.props.history.push('/profile');
       }
       else
       {
-        this.setState({ isLoggedIn: sessionInfo });
+        this.setState({ loggingIn: sessionInfo });
       }
     }
     
@@ -54,7 +54,7 @@ export class NewUser extends React.Component{
                               <div className="panel-heading">
                                 <div className="row">
                                   <div className="col-12">
-                                    <a href="#" className="active" id="login-form-link">Register</a>
+                                    <a href="#" className="active" id="login-form-link">Login</a>
                                   </div>
                                 </div>
                                 <hr />
@@ -63,40 +63,45 @@ export class NewUser extends React.Component{
                                 <div className="row">
                                   <div className="col-lg-12">
                                     {(this.state.loggingIn == false) ?
-                                    <div className="alert alert-danger">Need some help?</div>
+                                    <div className="alert alert-danger">Error asshole!</div>
                                     : ''}
+<<<<<<< HEAD:src/js/Login.jsx
+
+=======
+>>>>>>> 29ce5f03ecef7452b4f5251b9008735ec079aafb:src/js/views/Login.jsx
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group col-10 mx-auto">
-                                        <label htmlFor="username">Your Name</label>
-                                        <input ng-model="Name" type="text" name="name" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="name" value={this.state.name} />
-                                      </div>
-                                      <div className="form-group col-10 mx-auto">
-                                        <label htmlFor="username">Email</label>
-                                        <input ng-model="newName" type="text" name="email" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
+                                        <label htmlFor="username">Username / Email</label>
+                                        <input ng-model="newName" type="text" name="username" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
                                       </div>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="password1">Password</label>
                                         <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
                                       </div>
-                                      <div className="form-group col-10 mx-auto">
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Confirm password" value={this.state.password} />
-                                      </div>
-                                      <div className="form-group col-10 mx-auto">
+                                      <div className="form-group text-center">
                                         <input type="checkbox" tabIndex="3" className="" name="remember" id="remember" />
                                         <label htmlFor="remember"> Remember Me</label>
+
                                         <div className="form-group">
                                         <div className="row">
                                           <div className="col-10 mx-auto">
-                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Register" />
+                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Log In" />
                                           </div>
                                         </div>
+                                      </div>
+                                      
+                                        <div className="form-group">
                                         <div className="row">
                                           <div className="col-10 mx-auto">
-                                            <label htmlFor="username">Already have an account? <Link to="/Login"><p>Login here!</p></Link></label>                                          </div>
+                                            <Link to="/"><p>New? Register Here</p></Link>
+                                          </div>
                                         </div>
-                                      </div>
+                                      </div>                                      
                                         
                                       </div>
+                                      
+                                      
+                                      
                                     </form>
                                   </div>
                                 </div>
