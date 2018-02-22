@@ -1,12 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
 import {Home} from './views/Home';
-import {Profile} from './views/Profile1';
-import {NewUser} from './views/newuser';
+import {Profile} from './views/Profile';
+import {NewUser} from './views/Newuser';
 import {Login} from './views/Login';
 import {ProductMain} from './components/ProductMain';
 import {Cart} from './views/Cart';
-import {searchresults} from './views/searchresults';
+import {searchresults} from './views/Searchresults';
 import {Searchbar1} from './components/Searchbar1.jsx';
 import {Navbar} from './components/Navbar.jsx';
 import {About} from './views/About.jsx';
@@ -27,9 +27,9 @@ export class Layout extends React.Component{
                             <Switch>
                                 <Route exact path='/index.html' component={Home} />
                                 <Route exact path='/' component={Home} />                        
-                                <Route exact path='/profile' component={Profile} />
+                                <Route exact path='/Profile' component={Profile} />
                                 <Route exact path='/Login' component={Login} />
-                                <Route exact path='/newuser' component={NewUser} />
+                                <Route exact path='/Newuser' component={NewUser} />
                                 <Route exact path='/ProductMain' component={ProductMain} />
                                 <Route exact path='/Cart' component={Cart} />
                                 <Route exact path='/searchresults' component={searchresults} />
