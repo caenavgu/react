@@ -12,6 +12,7 @@ import {Navbar} from './components/Navbar.jsx';
 import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
+import {AdminProductView} from './views/AdminProductView.jsx';
 
 export class Layout extends React.Component{
     
@@ -35,6 +36,7 @@ export class Layout extends React.Component{
                                 <Route exact path='/About' component={About} />
                                 <Route exact path='/BecomeASeller' component={BecomeASeller} />
                                 <Route exact path='/ContactUs' component={ContactUs} />
+                                <Route exact path='/AdminProductView' component={AdminProductView} />
                             </Switch>
                         </div>    
                     </BrowserRouter> 

@@ -34,7 +34,7 @@ constructor () {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-2 text-center text-white">
+                        <div className="col-2 text-center text-white align-middle">
                             <Link to="/Login"><p className="text-white">Login</p></Link>
                         </div>
                         <div className="col-2 text-center">
