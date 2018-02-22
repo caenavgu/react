@@ -25,10 +25,10 @@ constructor () {
                                     <input type="search" className="form-control" id="inputPassword2" placeholder="Find something awesome here!" />
                                 </div>
                                 <button type="submit" className="btn btn-primary"><Link to="/searchresults"><i className="fa fa-search" aria-hidden="true"></i></Link></button>
-                            </form>
+                            </form>s    
                         </div>
                     <div>
-                        <button className="btn btn-outline-info pull-right" id='c' type="submit"><Link to="/Profile">LOGIN</Link></button><br />
+                        <button className="btn btn-outline-info pull-right m-0" id='c' type="submit"><Link to="/Profile">LOGIN</Link></button><br />
                         <Link className="btn pull-right" to="/newuser">New? Start here.</Link>
                     </div>
                 </nav>

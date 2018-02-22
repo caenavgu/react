@@ -10,6 +10,10 @@ export class ProductMain extends React.Component{
             productImageURL:'/src/img/homeProducts/product-shirt-bsod.png', 
             title:'BSOD Blue Shirt (Limited Edition)', 
             price:'$20.00',
+            MSRP:'24.99',
+            productManufacturer:"",
+            productReleaseDate:"",
+            productStock:"",
             productHeading1: 'Perks',
             productli1: 'Shirt is the bluest of blues',
             productli2: 'Made of 100% Cotton',
@@ -35,7 +39,7 @@ export class ProductMain extends React.Component{
                                 <div class="col-xs-6">
                                     <div className="m" max-width="400">{this.state.productInfo.productDescription}</div>
                                 </div>                                
-<div class="col-xs-6">
+                                <div class="col-xs-6">
                                     <h1>{this.state.productInfo.title}</h1>
                                         <p>{this.state.productInfo.price}</p>
                                         <p><a href="#" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-edit"></span><i class="fas fa-shopping-cart"></i> Add to Cart</a></p>

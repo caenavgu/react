@@ -55,7 +55,7 @@ export class NewUser extends React.Component{
                               <div className="panel-heading">
                                 <div className="row">
                                   <div className="col-12">
-                                    <a href="#" className="active" id="login-form-link">Register</a>
+                                    <a className="active" id="login-form-link">Register</a>
                                   </div>
                                 </div>
                                 <hr />
