@@ -65,10 +65,7 @@ export class Login extends React.Component{
                                     {(this.state.loggingIn == false) ?
                                     <div className="alert alert-danger">Error asshole!</div>
                                     : ''}
-<<<<<<< HEAD:src/js/Login.jsx
 
-=======
->>>>>>> 29ce5f03ecef7452b4f5251b9008735ec079aafb:src/js/views/Login.jsx
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Username / Email</label>

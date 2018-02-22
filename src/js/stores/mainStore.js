@@ -1,4 +1,5 @@
 import EventEmmiter from 'events';
+import DevShuiAPIWapper from '../utils/DevShuiAPIWapper.js';
 
 import * as MainActions from '../actions/mainActions.js'
 import Dispatcher from '../dispatchers/dispatcher.js';
@@ -12,12 +13,17 @@ class MainStore extends EventEmmiter{
         this._model = {
             signedIn: false,
             username: '',
-            userid: 0
+            userid: 0,
+            globalProductList: []
         };
     }
     setModel(modelToBeMerged){
         this._model = Object.assign(this._model, modelToBeMerged);
         this.emit('change');
+    }
+    
+    getProducts(){
+        return this._model.globalProductList;
     }
     
     handleActions(actionThatWasDispatched){
@@ -31,6 +37,13 @@ class MainStore extends EventEmmiter{
             case "LOGIN_ERROR":
                 this.setModel({ signedIn: false });
             break;
+            
+            case "GET_PRODUCTS":
+                
+                var theProducts = actionThatWasDispatched.actionData;
+                this.setModel({globalProductList: theProducts });
+            break;
+            
         }
         
     }

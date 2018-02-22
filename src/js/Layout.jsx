@@ -12,8 +12,20 @@ import {Navbar} from './components/Navbar.jsx';
 import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
+import * as mainActions from './actions/mainActions.js';
+import * as mainStore from './stores/mainStore.js';
+import DevShuiAPIWapper from './utils/DevShuiAPIWapper.js';
 
 export class Layout extends React.Component{
+    
+    componentWillMount(){
+        mainActions.getProductsAction();
+        mainStore.on('change', function(){
+            this.setState({
+                products: mainStore.getProducts()
+              });
+        });
+    }
     
     render(){
         

@@ -2,6 +2,8 @@
 *   Modules dependencies
 */
 import React from 'react';
+import mainStore from '../stores/mainStore.js';
+
 import {ProductItem} from './ProductItem';
 
 
@@ -11,15 +13,20 @@ export class Productscard extends React.Component{
     super();
     
     this.state = {
-       products : [
-                  {URLImage:'/src/img/homeProducts/product-shirt-panda.png', title: 'pants', information: 'sfsdfasdflksdfjasd;lkadf', price: 100}, 
-                  {URLImage:'/src/img/homeProducts/product-shirt-bsod.png', title: 'shoes', information: 'sfsdfasdflkgfdsgsdfgsdfjasd;lkadf', price: 100},
-                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
-                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100},
-                  {URLImage:'/src/img/homeProducts/product-shirt-password.png', title: 'sox', information: 'sfsdfasdflksdgsdfgsdfgfjasd;lkadf', price: 100}
+       products : [{name_product: null,
+                    name_brand: null,
+                    description_product: null,
+                    quantity_products_stock: null,
+                    price_product: null,
+                    product_status: null}
                   ],
     }
   }
+  
+
+  
+
+
 
   render(){
     

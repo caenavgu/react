@@ -1,5 +1,5 @@
-
 import dispatcher from '../dispatchers/dispatcher';
+import DevShuiAPIWapper from '../utils/DevShuiAPIWapper.js';
 
 
 /*
@@ -26,4 +26,15 @@ export function login(username, password){
         var theActionToBeDispatched = { actionType: 'LOGIN_ERROR', actionData: null };
         dispatcher.dispatch(theActionToBeDispatched);
     }
+}
+
+export function getProductsAction(){
+    DevShuiAPIWapper.getProducts().them(function(productsList){
+        console.log(productsList);
+        dispatcher.dispatch({
+            actionData: productsList,
+            actionType: 'GET_PRODUCTS',
+        });
+    })
+    
 }
