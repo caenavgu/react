@@ -13,8 +13,13 @@ import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
 import {AdminProductView} from './views/AdminProductView.jsx';
+import * as mainActions from './actions/mainActions.js';
 
 export class Layout extends React.Component{
+    
+    componentWillMount(){
+        mainActions.getProductsAction();
+    }
     
     render(){
         return(
