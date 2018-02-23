@@ -2,7 +2,7 @@ import React from 'react';
 import {Searchbar} from '../components/Searchbar.jsx';
 import {Navbar} from '../components/Navbar.jsx';
 import {Carousel} from '../components/Carousel.jsx';
-import {Showcase} from '../components/Showcase.jsx';
+import {Productscard} from '../components/Productscard.jsx';
 import {Promotion} from '../components/Promotion.jsx';
 import {CategoryArea} from '../components/CategoryArea.jsx';
 import {HorizontalCard} from '../components/HorizontalCard.jsx';
@@ -15,7 +15,7 @@ export class Home extends React.Component{
         return(
             <div>
                 <Carousel />
-                <Showcase />    
+                <Productscard data={this.props.products} />    
                 <Promotion/>
                 <CategoryArea/>
                 <HorizontalCard/>

@@ -1,4 +1,3 @@
-import * as mainActions from '../actions/mainActions.js';
 
 var DevShuiAPIWapper = {
         // *runtime* context of which API to call
@@ -33,7 +32,7 @@ var DevShuiAPIWapper = {
                     }
                     else
                     {
-                    	reject('ERROR on the response!!! ',error);
+                    	reject('ERROR on the response!!! ');
                     }
                 };
                 xhttp.open(methodType, url, true);

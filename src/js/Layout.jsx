@@ -12,13 +12,10 @@ import {Navbar} from './components/Navbar.jsx';
 import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
-<<<<<<< HEAD
 import * as mainActions from './actions/mainActions.js';
-import * as mainStore from './stores/mainStore.js';
+import mainStore from './stores/mainStore.js';
 import DevShuiAPIWapper from './utils/DevShuiAPIWapper.js';
-=======
 import {AdminProductView} from './views/AdminProductView.jsx';
->>>>>>> 44e778f5dea160926b7c8389881aae9f388cf7b1
 
 export class Layout extends React.Component{
     

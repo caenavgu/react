@@ -29,12 +29,14 @@ export function login(username, password){
 }
 
 export function getProductsAction(){
-    DevShuiAPIWapper.getProducts().them(function(productsList){
+    DevShuiAPIWapper.getProducts().then(function(productsList){
         console.log(productsList);
         dispatcher.dispatch({
             actionData: productsList,
             actionType: 'GET_PRODUCTS',
         });
-    })
+    }).catch(function(){
+        console.log('Error in the getProducts request');
+    });
     
 }
