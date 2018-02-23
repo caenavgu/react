@@ -24,13 +24,12 @@ var DevShuiAPIWapper = {
             
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = (response) => {
-                    
                     if (xhttp.readyState == 4 && xhttp.status == 200) {
                         this._removePendingPromise(callPromise);
                         const dataReadyToSave = JSON.parse(xhttp.responseText);
                         resolve(dataReadyToSave);
                     }
-                    else
+                    else if (xhttp.status >= 300)
                     {
                     	reject('ERROR on the response!!! ');
                     }

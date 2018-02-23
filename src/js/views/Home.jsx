@@ -6,16 +6,33 @@ import {Productscard} from '../components/Productscard.jsx';
 import {Promotion} from '../components/Promotion.jsx';
 import {CategoryArea} from '../components/CategoryArea.jsx';
 import {HorizontalCard} from '../components/HorizontalCard.jsx';
+import * as mainActions from '../actions/mainActions.js';
+import mainStore from '../stores/mainStore.js';
 {/*import {Profile} from './components/Profile';*/}
 
 export class Home extends React.Component{
     
+    constructor(props) {
+        super(props)
+        this.state = {
+            products: mainStore.getProducts()
+        }
+    }
+    
+    componentWillMount(){
+        mainActions.getProductsAction();
+        mainStore.on('change', ()=>{
+            this.setState({
+                products: mainStore.getProducts()
+              });
+        });
+    }
+    
     render(){
-        
         return(
             <div>
                 <Carousel />
-                <Productscard data={this.props.products} />    
+                <Productscard data={this.state.products} />    
                 <Promotion/>
                 <CategoryArea/>
                 <HorizontalCard/>

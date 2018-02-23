@@ -1,4 +1,4 @@
-import dispatcher from '../dispatchers/dispatcher';
+import dispatcher from '../dispatchers/dispatcher.js';
 import DevShuiAPIWapper from '../utils/DevShuiAPIWapper.js';
 
 
@@ -30,13 +30,12 @@ export function login(username, password){
 
 export function getProductsAction(){
     DevShuiAPIWapper.getProducts().then(function(productsList){
-        console.log(productsList);
         dispatcher.dispatch({
             actionData: productsList,
             actionType: 'GET_PRODUCTS',
         });
-    }).catch(function(){
-        console.log('Error in the getProducts request');
+    }).catch(function(err){
+        console.log('Error in the getProducts request', err);
     });
     
 }
