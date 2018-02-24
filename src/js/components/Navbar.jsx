@@ -14,7 +14,7 @@ constructor (props){
            this.addLink('Bumper Stickers','/categories/bumperstickers', 5)
            ]),
         this.addItem('BestSellers','/bestsellers', 6),
-        this.addItem('ShoppingCart','/shoppingcart', 7)
+        this.addItem('Shopping Cart','/shoppingcart', 7)
          ];
     }
     

@@ -31,7 +31,7 @@ export class Profile extends React.Component{
                                         </ul>
                                     </div>    
                             </div>  
-                                    : <div className="alert alert-danger col-6 mx-auto"><p>You are not currently logged in :( Login or register here.</p></div>
+                                    : <div className="alert alert-danger col-6 mx-auto"><p>You are not currently logged in :( Please login or register.</p></div>
                                     }             
   
                         </div>

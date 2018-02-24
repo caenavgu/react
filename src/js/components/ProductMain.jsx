@@ -8,7 +8,7 @@ export class ProductMain extends React.Component{
     this.state = {
         productInfo: {
             productImageURL:'/src/img/homeProducts/product-shirt-bsod.png', 
-            title:'BSOD Blue Shirt (Limited Edition)', 
+            title:'BSOD Blue Shirts (Limited Edition)', 
             price:'$20.00',
             MSRP:'24.99',
             productManufacturer:"",
@@ -30,7 +30,7 @@ export class ProductMain extends React.Component{
     render(){
         
         return(
-                    <div>    
+                    <div  className="col-8 mx-auto">    
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-6">

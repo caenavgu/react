@@ -14,7 +14,10 @@ export class Productscard extends React.Component{
       });
     
       return(
+        <div>
           <div className="card-deck"> {productsAsHTMLElemetns} </div>
+          <div><h1>Hello</h1></div>
+        </div>
       );
       
     }

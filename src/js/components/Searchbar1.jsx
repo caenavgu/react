@@ -11,11 +11,11 @@ constructor () {
     render(){
         return(
             <div>
-                    <nav class="navbar navbar-dark bg-dark">
-                        <div className="col-2 text-center">
-                            <Link to="/"><img src="src/img/primary/devshui-logo.jpg" alt="DevShui Logo!"/></Link>
+                    <nav class="row navbar navbar-dark bg-dark">
+                        <div className="col-xs-4 mx-auto p-2">
+                            <Link to="/"><img src="src/img/primary/devshui-logo.png" alt="DevShui Logo!"/></Link>
                         </div>
-                        <div className="col-5 mx-auto">
+                        <div className="col-xs-6 mx-auto p-2">
                             <div className="input-group">
                                 <div className="input-group-btn search-panel">
                                     <button type="button" className="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -34,12 +34,14 @@ constructor () {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-2 text-center text-white align-middle">
-                            <Link to="/Login"><p className="text-white">Login</p></Link>
+                        <div className="col-2 mx-auto">
+                            <div className="col-xs-6 text-center text-white align-middle">
+                                <Link to="/Login"><p className="text-white">Login</p></Link>
+                            </div>
+                            <div className="col-xs-6 text-center">
+                                <Link to="/NewUser"><p className="text-white">New? Register Here</p></Link>
+                            </div>
                         </div>
-                        <div className="col-2 text-center">
-                            <Link to="/NewUser"><p className="text-white">New? Register Here</p></Link>
-                    </div>
                 </nav> 
                 
             {/*<div className="container">    
