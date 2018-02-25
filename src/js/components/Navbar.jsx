@@ -22,8 +22,8 @@ constructor (props){
       
       return {
         key: key,
-        label: itemName,
         url: itemURL,
+        label: itemName,
         links: itemLinks 
       }
     }
@@ -31,8 +31,8 @@ constructor (props){
       addLink(linkName, linkURL, key){
         return {
           key: key,
-          label: linkName,
-          url: linkURL
+          url: linkURL,
+          label: linkName
         }
       }
       
