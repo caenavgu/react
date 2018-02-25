@@ -14,7 +14,7 @@ constructor (props){
            this.addLink('Bumper Stickers','/categories/bumperstickers', 5)
            ]),
         this.addItem('BestSellers','/bestsellers', 6),
-        this.addItem('Shopping Cart','/shoppingcart', 7)
+        this.addItem('Shopping Cart (0)','/shoppingcart', 7)
          ];
     }
     
@@ -22,8 +22,8 @@ constructor (props){
       
       return {
         key: key,
-        url: itemURL,
         label: itemName,
+        url: itemURL,
         links: itemLinks 
       }
     }
@@ -31,8 +31,8 @@ constructor (props){
       addLink(linkName, linkURL, key){
         return {
           key: key,
-          url: linkURL,
-          label: linkName
+          label: linkName,
+          url: linkURL
         }
       }
       
@@ -46,7 +46,7 @@ constructor (props){
                   </button>
                 
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav mr-auto">
+                    <ul className="navbar-nav mx-auto">
                       {this.renderMenu(this.theMenu)}
                     </ul>
                   </div>

@@ -42,7 +42,10 @@ export class ProductMain extends React.Component{
                                 <div class="col-xs-6">
                                     <h1>{this.state.productInfo.title}</h1>
                                         <p>{this.state.productInfo.price}</p>
-                                        <p><a href="#" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-edit"></span><i class="fas fa-shopping-cart"></i> Add to Cart</a></p>
+                                        <p>
+                                            <button className="btn btn-success btn-lg item-add-button" type="submit"><span class="glyphicon glyphicon-edit"></span><i class="fas fa-shopping-cart"></i>Add to Cart</button> 
+                                        </p>
+                                        <select className='item-qty'>{getOptionsArray(count).map(num => <option key={num} value={num}>{num}</option>)}</select>
                                     <h3>{this.state.productInfo.productHeading1}</h3>
                                         <ul>
                                             <li>{this.state.productInfo.productli1}</li>
