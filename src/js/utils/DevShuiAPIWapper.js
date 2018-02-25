@@ -13,7 +13,7 @@ var DevShuiAPIWapper = {
             this._pendingPromises.push(element);
         },
         
-        getPendingStatus: function() {
+        _getPendingStatus: function() {
             return (this._pendingPromises.length == 0);
         },
       
