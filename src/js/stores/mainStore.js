@@ -17,13 +17,10 @@ class MainStore extends EventEmmiter{
             globalProductList: []
         };
     }
+    
     setModel(modelToBeMerged){
         this._model = Object.assign(this._model, modelToBeMerged);
         this.emit('change');
-    }
-    
-    getProducts(){
-        return this._model.globalProductList;
     }
     
     handleActions(actionThatWasDispatched){
@@ -34,16 +31,16 @@ class MainStore extends EventEmmiter{
                 var actionDataReceived = actionThatWasDispatched.actionData;
                 this.setModel({ signedIn:true, username: actionDataReceived.username, userid: actionDataReceived.user_id });
             break;
+            
             case "LOGIN_ERROR":
                 this.setModel({ signedIn: false });
             break;
             
             case "GET_PRODUCTS":
-                
                 var theProducts = actionThatWasDispatched.actionData;
+                //es aqui la logica de las imagenes (filter)
                 this.setModel({globalProductList: theProducts });
             break;
-            
         }
         
     }
@@ -52,7 +49,11 @@ class MainStore extends EventEmmiter{
         return this._model.signedIn;
     }
     
+    getProducts(){
+        return this._model.globalProductList;
+    }
 }
+
 var mainStore = new MainStore();
 Dispatcher.register(mainStore.handleActions.bind(mainStore));
 window.Dispatcher = Dispatcher;

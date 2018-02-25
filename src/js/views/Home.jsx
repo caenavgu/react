@@ -16,11 +16,13 @@ export class Home extends React.Component{
         this.state = {
             products: mainStore.getProducts()
         }
-        
+    }
+    
+    componentWillMount(){
         mainStore.on('change', ()=>{
             this.setState({
                 products: mainStore.getProducts()
-              });
+            });
         });
     }
     
@@ -30,7 +32,7 @@ export class Home extends React.Component{
                 <Carousel />
                 <Productscard data={this.state.products} />    
                 <Promotion/>
-                <CategoryArea/>
+                <CategoryArea  data={this.state.products}/>
                 <HorizontalCard/>
             </div>
             );
