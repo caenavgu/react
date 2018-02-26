@@ -1,6 +1,7 @@
 import React from 'react';
+import {CartStatus} from './CartStatus.jsx';
 
-export class Navbar extends React.Component{
+export class NavbarLinks extends React.Component{
     
 constructor (props){
    
@@ -39,6 +40,7 @@ constructor (props){
     render() {
         return(
             <div className='header'>
+                                
                 <nav className="navbar navbar-expand-md navbar-light bg-light mb-4">
 
                   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,7 +50,9 @@ constructor (props){
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto">
                       {this.renderMenu(this.theMenu)}
+                      <li><CartStatus /></li>
                     </ul>
+                    {/*{this.props.CartStatus}*/}
                   </div>
                 </nav>
             </div>

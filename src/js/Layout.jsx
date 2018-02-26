@@ -1,18 +1,22 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
+
 import {Home} from './views/Home';
 import {Profile} from './views/Profile';
 import {NewUser} from './views/Newuser';
 import {Login} from './views/Login';
-import {ProductMain} from './components/ProductMain';
 import {Cart} from './views/Cart';
-import {searchresults} from './views/Searchresults';
-import {Searchbar1} from './components/Searchbar1.jsx';
-import {Navbar} from './components/Navbar.jsx';
 import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
 import {AdminProductView} from './views/AdminProductView.jsx';
+import {searchresults} from './views/Searchresults';
+
+import {ProductMain} from './components/ProductMain';
+import {Searchbar1} from './components/Searchbar1.jsx';
+import {CartStatus} from './components/CartStatus.jsx';
+import {NavbarLinks} from './components/NavbarLinks.jsx';
+
 import * as mainActions from './actions/mainActions.js';
 
 export class Layout extends React.Component{
@@ -27,7 +31,7 @@ export class Layout extends React.Component{
                 <BrowserRouter> 
                     <div>
                         <Searchbar1 />
-                        <Navbar />
+                        <NavbarLinks />
                             <Switch>
                                 <Route exact path='/index.html' component={Home} />
                                 <Route exact path='/' component={Home} />                        

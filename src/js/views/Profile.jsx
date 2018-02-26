@@ -1,6 +1,6 @@
 import React from 'react';
 import {Searchbar} from '../components/Searchbar.jsx';
-import {Navbar} from '../components/Navbar.jsx';
+import {NavbarLinks} from '../components/NavbarLinks.jsx';
 
 export class Profile extends React.Component{
     
