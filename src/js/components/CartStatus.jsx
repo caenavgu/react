@@ -6,13 +6,9 @@ export class CartStatus extends React.Component{
     render(){
         
         return(
-            <div className="container">
-                <div className="row">
-                  <div className="col-4">
-                    <h1>This is CartStatus</h1>
-                  </div>
+                  <div class="p-2">
+                    <li><i class="fas fa-shopping-cart"></i>(0)</li>
                 </div>
-            </div>
             );
     }
 }

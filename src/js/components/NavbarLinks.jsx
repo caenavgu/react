@@ -15,7 +15,6 @@ constructor (props){
            this.addLink('Bumper Stickers','/categories/bumperstickers', 5)
            ]),
         this.addItem('BestSellers','/bestsellers', 6),
-        this.addItem('Shopping Cart (0)','/shoppingcart', 7)
          ];
     }
     
@@ -50,7 +49,7 @@ constructor (props){
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto">
                       {this.renderMenu(this.theMenu)}
-                      <li><CartStatus /></li>
+                      <li><a href="./Cart"><CartStatus /></a></li>
                     </ul>
                     {/*{this.props.CartStatus}*/}
                   </div>
