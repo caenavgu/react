@@ -12,14 +12,15 @@ export class Carousel extends React.Component{
        carouselPoster : [
                   {URL:'/src/img/homeCarousel/shirt-1.png'}, 
                   {URL:'/src/img/homeCarousel/mug-1.png'}, 
-                  {URL:'/src/img/homeCarousel/bump-1.png'} 
-                  ],
+                  {URL:'/src/img/homeCarousel/bump-1.png'}, 
+                  {URL:'/src/img/homeCarousel/Img-0.png'} 
+                  ]
     }
   }
     
   render(){
     
-    const carouseIndicatorslAsHTMLElemetns = this.state.carouselPoster.map((cIndexPoster, i) => {
+    const carouseIndicatorslAsHTMLElemetns = this.state.carouselPoster.map((IndexPoster, i) => {
       // expression goes here:
       return( <li key={i} data-target="#carouselExampleIndicators" data-slide-to={i} className={(i==0) ? "active":''} ></li>
       );
