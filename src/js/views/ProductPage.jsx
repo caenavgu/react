@@ -7,8 +7,6 @@ import {Promotion} from '../components/Promotion.jsx';
 import {CategoryArea} from '../components/CategoryArea.jsx';
 import {HorizontalCard} from '../components/HorizontalCard.jsx';
 import mainStore from '../stores/mainStore.js';
-import {ProductMain} from './components/ProductMain';
-
 {/*import {Profile} from './components/Profile';*/}
 
 export class Home extends React.Component{
@@ -31,7 +29,11 @@ export class Home extends React.Component{
     render(){
         return(
             <div>
-                <ProductMain />    
+                <Carousel />
+                <Productscard data={this.state.products} />    
+                <Promotion/>
+                <CategoryArea  data={this.state.products}/>
+                <HorizontalCard/>
             </div>
             );
     }

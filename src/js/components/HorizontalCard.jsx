@@ -9,13 +9,13 @@ export class HorizontalCard extends React.Component{
     <div className="card">
       <div className="row ">
         <div className="col-md-4">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=400%C3%97400&w=400&h=400" className="w-100"/>
+            <img src="/src/img/homeProducts/devshui-help.jpg" className="w-100"/>
           </div>
           <div className="col-md-8 px-3">
             <div className="card-block px-3">
-              <h4 className="card-title">Lorem ipsum dolor sit amet</h4>
-              <p className="card-text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-              <p className="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h4 className="card-title">Dear Miami: WE LOVE YOU</h4>
+              <p className="card-text">Did we come off too strong? Hopefully not- each order that you make contributes to the lesser priveleged to learn the skills they need to help contribute to Miami's diverse, flourishing tech landscape.</p>
+              <p className="card-text">If you know someone that has the drive to learn, you can nominate them to receive a partial or full scholarship to a certified local coding academy.</p>
               <a href="#" className="btn btn-primary">Read More</a>
             </div>
           </div>
