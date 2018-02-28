@@ -1,36 +1,23 @@
 import React from 'react';
+import {ProductItem} from './ProductItem';
 
-import{starthubImage} from '../../../img/starthub.jpg';
-
-export class Home extends React.Component{
+export class SearchResults extends React.Component{
     
-    render(){
-        return(
-                <div>
-                    <div>
-                        <h1>Searchbar</h1>
-                        <h1>Search Results:</h1>
-                        <h2>Product 1 image</h2>
-                        <p>Shirt 1</p>
-                        <p>$15.00</p>
-                    </div>
-                    <div>
-                        <h1>Searchbar</h1>
-                        <h1>Search Results:</h1>
-                        <h2>Product 2 image</h2>
-                        <p>Mug 1</p>
-                        <p>$10.00</p>
-                    </div>
-                    <div>
-                        <h1>Searchbar</h1>
-                        <h1>Search Results:</h1>
-                        <h2>Product 3 image</h2>
-                        <p>Shirt 2</p>
-                        <p>$15.00</p>
-                    </div>
-                </div>
-                
-            );  
+  render(){
+    const productsAsHTMLElements = this.props.data.map((product, i) => {
+      // expression goes here:
+      { if(i<4){
+          return (<ProductItem key={i} data={product} align={"center"} border={"all"} />);
+        }
+      }
+    });
+    
+      return(
+        <div className='container-fluid'>
+          <div className="card-deck row"> {productsAsHTMLElements} </div>
+          <div><h1>SEARCJ RESSULT</h1></div>
+        </div>
+      );
+      
     }
-    
 }

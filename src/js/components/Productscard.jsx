@@ -4,10 +4,10 @@
 import React from 'react';
 import {ProductItem} from './ProductItem';
 
-
 export class Productscard extends React.Component{
+  
   render(){
-    const productsAsHTMLElemetns = this.props.data.map((product, i) => {
+    const productsAsHTMLElements = this.props.data.map((product, i) => {
       // expression goes here:
       { if(i<4){
           return (<ProductItem key={i} data={product} align={"center"} border={"all"} />);
@@ -17,7 +17,7 @@ export class Productscard extends React.Component{
     
       return(
         <div className='container-fluid'>
-          <div className="card-deck row"> {productsAsHTMLElemetns} </div>
+          <div className="card-deck row"> {productsAsHTMLElements} </div>
         </div>
       );
       

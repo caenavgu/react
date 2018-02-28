@@ -10,8 +10,8 @@ import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
 import {AdminProductView} from './views/AdminProductView.jsx';
-import {searchresults} from './views/Searchresults';
 
+import {SearchResultsPage} from './components/SearchResultsPage.jsx';
 import {ProductMain} from './components/ProductMain';
 import {Searchbar1} from './components/Searchbar1.jsx';
 import {CartStatus} from './components/CartStatus.jsx';
@@ -40,7 +40,7 @@ export class Layout extends React.Component{
                                 <Route exact path='/Newuser' component={NewUser} />
                                 <Route exact path='/ProductMain' component={ProductMain} />
                                 <Route exact path='/Cart' component={Cart} />
-                                <Route exact path='/searchresults' component={searchresults} />
+                                <Route exact path='/searchResults' component={SearchResultsPage} />
                                 <Route exact path='/About' component={About} />
                                 <Route exact path='/BecomeASeller' component={BecomeASeller} />
                                 <Route exact path='/ContactUs' component={ContactUs} />
