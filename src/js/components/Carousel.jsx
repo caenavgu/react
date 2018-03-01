@@ -14,7 +14,6 @@ export class Carousel extends React.Component{
           {URL:'/src/img/homeCarousel/shirt-1.png'},
           {URL:'/src/img/homeCarousel/mug-1.png'}, 
           {URL:'/src/img/homeCarousel/bump-1.png'},
-          {URL:'/src/img/homeCarousel/Img-0.png'}
                   ]
     }
   }

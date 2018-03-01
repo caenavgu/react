@@ -69,7 +69,7 @@ export class NewUser extends React.Component{
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Your Name</label>
-                                        <input ng-model="Name" type="text" name="name" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="name" value={this.state.name} />
+                                        <input ng-model="Name" type="text" name="name" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Name" value={this.state.name} />
                                       </div>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Email</label>
