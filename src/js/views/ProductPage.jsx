@@ -4,7 +4,6 @@
 import React from 'react';
 import mainStore from '../stores/mainStore.js';
 import {ProductMain} from '../components/ProductMain';
-import {Profile} from './components/Profile';
 /*  EXPORT  */
 export class ProductPage extends React.Component{
     

@@ -10,36 +10,51 @@ export class CategoryArea extends React.Component{
     super();
     
     this.state = {
-      labels: ['SHIRTS', 'COFFEE MUGS', 'FUNNY']
+      labels: ['Shirts', 'Coffee Mugs', 'Funny']
     };
   }
   
   render(){
     
-    const categoryAreaLabels= this.state.labels.map((label, index) => {
+    const categoryAreaLabels= this.state.labels.map((label, indexLabels) => {
       // expression goes here:
       return(
-        <a  key={index} className= {(index==0) ? "nav-item nav-link text-secondary active":'nav-item nav-link text-secondary'} id={label} data-toggle="tab" href={index} role="tab" aria-controls={index} aria-selected="true">{label}</a>
+        <a  key={indexLabels} className= {(indexLabels==0) ? "nav-item nav-link text-secondary active":'nav-item nav-link text-secondary'} id={label} data-toggle="tab" href={'#'+indexLabels} role="tab" aria-controls={indexLabels} aria-selected="true">{label}</a>
       );
     });
     
-    const categoryAreaDiv= this.state.labels.map((label, index) => {
+    const categoryAreaDiv= this.state.labels.map((label, indexDiv) => {
       // expression goes here:
       return( 
-        <div key={index} className={(index==0) ? "tab-pane fade show active":'tab-pane fade show'} id={label} role="tabpanel" aria-labelledby={index}>
+        <div key={indexDiv} className={(indexDiv==0) ? "tab-pane fade show active":'tab-pane fade show'} id={indexDiv} role="tabpanel" aria-labelledby={indexDiv}>
           <div className="container">
-            <div className="row">
-              {this.props.data.map((product, index) => {
+            <div className="row"> 
+              {this.props.data.map((product, i) => {
               // expression goes here:
                 {
-                  if(index < 12){
-                    return(
-                    <div className='col-md-2'>
-                      <ProductItem key={index} data={product} align={"left"}/>
-                    </div>
-                    );}
-                }
-               })
+                    if(indexDiv==0 && product.product_tags.includes(2)){
+                      return(
+                      <div className='col-md-2'>
+                        <ProductItem key={i} data={product} align={"left"}/>
+                      </div>
+                      );
+                    } 
+                    else if(indexDiv==1 &&product.product_tags.includes(3)){
+                      return(
+                      <div className='col-md-2'>
+                        <ProductItem key={i} data={product} align={"left"}/>
+                      </div>
+                      );
+                    }
+                    else if(indexDiv==2 &&product.product_tags.includes(5)){
+                      return(
+                      <div className='col-md-2'>
+                        <ProductItem key={i} data={product} align={"left"}/>
+                      </div>
+                      );
+                    }
+               } 
+              })
               }
             </div>
           </div>
@@ -50,7 +65,7 @@ export class CategoryArea extends React.Component{
     return(
       <div className='container'>
         <nav>
-          <div className="nav nav-tabs" id="nav-tab" role="tablist">
+          <div className="nav nav-tabs text-uppercase" id="nav-tab" role="tablist">
             {categoryAreaLabels}
           </div>
         </nav>
@@ -60,5 +75,4 @@ export class CategoryArea extends React.Component{
       </div>
     );  
   }
-    
 }
