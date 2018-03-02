@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProductMain} from '../components/ProductMain';
 
 export class Cart extends React.Component{
     

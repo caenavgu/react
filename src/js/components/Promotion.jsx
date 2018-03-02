@@ -5,9 +5,13 @@ export class Promotion extends React.Component{
     render(){
         
         return(
-           <div className='container'>
-                <img id='promotion' src="http://www.thinkgeek.com/images/mobile/home-carousel/171102-m-holiday-giftcenter-2x.jpg" className="rounded float-left" alt="..."/>
-                <img id='promotion' src="http://www.thinkgeek.com/images/mobile/home-carousel/171205-m-timmys-last-call-2x.jpg" className="rounded" alt="..."/>
+           <div className='container-fluid bg-dark'>
+                <div className="row">
+                    <div className="col-xs-6 mx-auto">
+                        <img id='promotion' src="https://i.imgur.com/r2Rcbp5.jpg" className="rounded" alt="..."/>
+                        <img id='promotion' src="https://i.imgur.com/XirOjZZ.jpg" className="rounded" alt="..."/>
+                    </div>
+                </div>
            </div>
             );  
     }
