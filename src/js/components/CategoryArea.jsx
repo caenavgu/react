@@ -32,9 +32,9 @@ export class CategoryArea extends React.Component{
               {this.props.data.map((product, index) => {
               // expression goes here:
                 {
-                  if(index < 12){
+                  if(index < 8){
                     return(
-                    <div className='col-md-2'>
+                    <div className='col-md-3'>
                       <ProductItem key={index} data={product} align={"left"}/>
                     </div>
                     );}
