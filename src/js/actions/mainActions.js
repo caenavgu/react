@@ -37,5 +37,16 @@ export function getProductsAction(){
     }).catch(function(err){
         console.log('Error in the getProducts request', err);
     });
-    
+}
+
+export function getSingleProductAction(idProduct) {
+    // body...
+    DevShuiAPIWapper.getSingleProduct(idProduct).then(function(productInformation){
+        dispatcher.dispatch({
+            actionData: productInformation,
+            actionType: 'GET_SINGLE_PRODUCT',
+        });   
+    }).catch(function(err){
+        console.log('Error in the getSingleProduct request', err);
+    });
 }

@@ -14,7 +14,8 @@ class MainStore extends EventEmmiter{
             signedIn: false,
             username: '',
             userid: 0,
-            globalProductList: []
+            globalProductList: [],
+            singleProduct:{}
         };
     }
     
@@ -41,16 +42,22 @@ class MainStore extends EventEmmiter{
                 //es aqui la logica de las imagenes (filter)
                 this.setModel({globalProductList: theProducts });
             break;
+            
         }
-        
     }
-    
+        
     getSessionInfo(){
         return this._model.signedIn;
     }
     
     getProducts(){
         return this._model.globalProductList;
+    }
+    
+    getSingleProduct(idProduct){
+        const data = this._model.globalProductList;
+        const result = data.filter((item) => item.id == idProduct);
+        return ((result.length >0) ? result[0] : 'null'  );
     }
 }
 

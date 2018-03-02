@@ -1,6 +1,8 @@
+/*
+*   Modules dependencies
+*/
 import React from 'react';
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
-
 import {Home} from './views/Home';
 import {Profile} from './views/Profile';
 import {NewUser} from './views/Newuser';
@@ -10,15 +12,13 @@ import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
 import {AdminProductView} from './views/AdminProductView.jsx';
-
 import {SearchResultsPage} from './components/SearchResultsPage.jsx';
-import {ProductMain} from './components/ProductMain';
+import {ProductPage} from './views/ProductPage';
 import {Searchbar1} from './components/Searchbar1.jsx';
 import {CartStatus} from './components/CartStatus.jsx';
 import {NavbarLinks} from './components/NavbarLinks.jsx';
-
 import * as mainActions from './actions/mainActions.js';
-
+/*  EXPORT  */
 export class Layout extends React.Component{
     
     componentWillMount(){
@@ -38,7 +38,7 @@ export class Layout extends React.Component{
                                 <Route exact path='/Profile' component={Profile} />
                                 <Route exact path='/Login' component={Login} />
                                 <Route exact path='/Newuser' component={NewUser} />
-                                <Route exact path='/ProductMain' component={ProductMain} />
+                                <Route exact path='/ProductPage/:id' component={ProductPage} />
                                 <Route exact path='/Cart' component={Cart} />
                                 <Route exact path='/searchResults' component={SearchResultsPage} />
                                 <Route exact path='/About' component={About} />

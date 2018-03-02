@@ -1,37 +1,31 @@
+/*
+*   Modules dependencies
+*/
 import React from 'react';
-import {Searchbar} from '../components/Searchbar.jsx';
-import {NavbarLinks} from '../components/NavbarLinks.jsx';
-import {Carousel} from '../components/Carousel.jsx';
-import {Productscard} from '../components/Productscard.jsx';
-import {Promotion} from '../components/Promotion.jsx';
-import {CategoryArea} from '../components/CategoryArea.jsx';
-import {HorizontalCard} from '../components/HorizontalCard.jsx';
 import mainStore from '../stores/mainStore.js';
-import {ProductMain} from './components/ProductMain';
-
-{/*import {Profile} from './components/Profile';*/}
-
-export class Home extends React.Component{
+import {ProductMain} from '../components/ProductMain';
+/*  EXPORT  */
+export class ProductPage extends React.Component{
     
-    constructor(props) {
-        super(props)
+        constructor(props) {
+        super(props);
         this.state = {
-            products: mainStore.getProducts()
-        }
+            productInformation: mainStore.getSingleProduct(this.props.match.params.id)
+        };
     }
     
     componentWillMount(){
         mainStore.on('change', ()=>{
             this.setState({
-                products: mainStore.getProducts()
+                productInformation: mainStore.getSingleProduct(this.props.match.params.id)
             });
         });
     }
-    
+
     render(){
         return(
             <div>
-                <ProductMain />    
+                <ProductMain data={this.state.productInformation}/>    
             </div>
             );
     }

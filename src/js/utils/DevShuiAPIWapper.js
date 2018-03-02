@@ -56,6 +56,14 @@ var DevShuiAPIWapper = {
         
         },
         
+        // getSingleProduct: function(idProduct) {
+        //     return this.callMethod(
+        //     'GET',
+        //     'https://django-caenavgu.c9users.io/api/product/'+idProduct
+        //     );
+        
+        // },
+        
         userValidate: function(formData) {
             return this.callMethod(
             'GET',

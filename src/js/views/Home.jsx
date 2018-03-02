@@ -1,21 +1,21 @@
+/*
+*   Modules dependencies
+*/
 import React from 'react';
-import {Searchbar} from '../components/Searchbar.jsx';
-import {NavbarLinks} from '../components/NavbarLinks.jsx';
 import {Carousel} from '../components/Carousel.jsx';
 import {Productscard} from '../components/Productscard.jsx';
 import {Promotion} from '../components/Promotion.jsx';
 import {CategoryArea} from '../components/CategoryArea.jsx';
 import {HorizontalCard} from '../components/HorizontalCard.jsx';
 import mainStore from '../stores/mainStore.js';
-{/*import {Profile} from './components/Profile';*/}
-
+/*  EXPORT  */
 export class Home extends React.Component{
     
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             products: mainStore.getProducts()
-        }
+        };
     }
     
     componentWillMount(){
@@ -25,7 +25,7 @@ export class Home extends React.Component{
             });
         });
     }
-    
+
     render(){
         return(
             <div>
