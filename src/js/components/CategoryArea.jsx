@@ -10,7 +10,7 @@ export class CategoryArea extends React.Component{
     super();
     
     this.state = {
-      labels: ['NEW STUFF', 'BESTSELLERS', 'ONSALE']
+      labels: ['SHIRTS', 'COFFEE MUGS', 'FUNNY']
     };
   }
   

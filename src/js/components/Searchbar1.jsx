@@ -37,7 +37,7 @@ constructor () {
                                 </span>
                             </div>
                         </div>
-                        <div className="col-2 mx-auto">
+                        <div className="col-xs-2 mx-auto">
                             <div className="col-xs-6 text-center text-white align-middle">
                                 <Link to="/Login"><p className="text-white">Login</p></Link>
                             </div>

@@ -3,7 +3,7 @@ import * as mainActions from '../actions/mainActions.js'
 import MainStore from  '../stores/mainStore.js'
 import { Link } from 'react-router-dom'
 
-export class Login extends React.Component{
+export class PasswordReminder extends React.Component{
     
     constructor() {
         super();
@@ -54,7 +54,7 @@ export class Login extends React.Component{
                               <div className="panel-heading">
                                 <div className="row">
                                   <div className="col-12">
-                                    <a className="active" id="login-form-link">Login</a>
+                                    <a className="active" id="login-form-link">Password Reset</a>
                                   </div>
                                 </div>
                                 <hr />
@@ -62,37 +62,19 @@ export class Login extends React.Component{
                               <div className="panel-body">
                                 <div className="row">
                                   <div className="col-lg-12">
-                                    {(this.state.loggingIn == false) ?
-                                    <div className="alert alert-danger">Error asshole!</div>
-                                    : ''}
-
                                     <form ng-submit="sendPost()" id="login-form" method="post" role="form" style={{display: 'block'}}>
                                       <div className="form-group col-10 mx-auto">
                                         <label htmlFor="username">Username / Email</label>
                                         <input ng-model="newName" type="text" name="username" id="username" tabIndex="1" className="form-control" onChange={(evt)=>this.setState({username: evt.target.value })} placeholder="Username" value={this.state.username} />
                                       </div>
-                                      <div className="form-group col-10 mx-auto">
-                                        <label htmlFor="password1">Password</label>
-                                        <input type="password" name="password" id="password" tabIndex="2" className="form-control" onChange={(evt)=>this.setState({password: evt.target.value })} placeholder="Password" value={this.state.password} />
-                                      </div>
                                       <div className="form-group text-center">
-                                        <input type="checkbox" tabIndex="3" className="" name="remember" id="remember" />
-                                        <label htmlFor="remember"> Remember Me</label>
-
                                         <div className="form-group">
                                         <div className="row">
                                           <div className="col-10 mx-auto">
-                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Log In" />
+                                            <input type="button" name="login-submit" id="login-submit" onClick={() => mainActions.login(this.state.username, this.state.password) } tabIndex="4" className="btn btn-primary btn-block" value="Send Password Reset" />
                                           </div>
                                         </div>
                                       </div>
-                                        <div className="form-group">
-                                        <div className="row">
-                                          <div className="col-10 mx-auto">
-                                            <p><Link to="/PasswordReminder">Forgot Password?</Link> <Link to="/NewUser">New? Register Here</Link></p>
-                                          </div>
-                                        </div>
-                                      </div>                                      
                                       </div>
                                     </form>
                                   </div>

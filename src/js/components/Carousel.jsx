@@ -10,10 +10,10 @@ export class Carousel extends React.Component{
     
     this.state = {
        carouselPoster : [
-                  {URL:'/src/img/homeCarousel/shirt-1.png'}, 
-                  {URL:'/src/img/homeCarousel/mug-1.png'}, 
-                  {URL:'/src/img/homeCarousel/bump-1.png'}, 
-                  {URL:'/src/img/homeCarousel/Img-0.png'} 
+          {URL:'/src/img/homeCarousel/dev-shui-ambi-banner.png'},
+          {URL:'/src/img/homeCarousel/shirt-1.png'},
+          {URL:'/src/img/homeCarousel/mug-1.png'}, 
+          {URL:'/src/img/homeCarousel/bump-1.png'},
                   ]
     }
   }
