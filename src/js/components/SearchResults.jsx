@@ -1,5 +1,6 @@
 import React from 'react';
 import {ProductItem} from './ProductItem';
+import { Link } from 'react-router-dom';
 
 export class SearchResults extends React.Component{
     
@@ -19,7 +20,7 @@ export class SearchResults extends React.Component{
                     <h2>{this.props.data.name_product}</h2>
                     <p>{this.props.data.name_brand}</p>
                     <p>{this.props.data.price_product}</p>
-                    <p><a href="#" class="btn btn-primary btn-success"><span class="glyphicon glyphicon-play"></span> More Info</a></p>
+                    <p><Link to={"ProductPage/"+this.props.data.id}><button class="btn btn-primary btn-success"><span class="glyphicon glyphicon-play"></span> More Info</button></Link></p>
                   </div>
                 </div>
                 

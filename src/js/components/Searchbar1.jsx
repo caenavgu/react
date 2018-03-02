@@ -15,8 +15,8 @@ constructor () {
         return(
             <div>
                     <nav className="row navbar navbar-dark bg-dark">
-                        <div className="col-xs-4 mx-auto p-2">
-                            <Link to="/"><img src="src/img/primary/devshui-logo.png" alt="DevShui Logo!"/></Link>
+                        <div className="col-xs-4 mx-auto">
+                            <Link to="/"><img src="/src/img/primary/devshui-logo.png" alt="DevShui Logo!"/></Link>
                         </div>
                         <div className="col-xs-6 mx-auto p-2">
                             <div className="input-group">
