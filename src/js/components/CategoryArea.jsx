@@ -27,14 +27,14 @@ export class CategoryArea extends React.Component{
       // expression goes here:
       return( 
         <div className="container-fluid" key={index} className={(index==0) ? "tab-pane fade show active":'tab-pane fade show'} id={label} role="tabpanel" aria-labelledby={index}>
-            <div className="row">
+            <div className="row mx-auto">
               {this.props.data.map((product, index) => {
               // expression goes here:
                 {
                   if(index < 6){
                     return(
                     <div className='col-xs-2'>
-                      <ProductItem key={index} data={product} align={"left"}/>
+                      <ProductItem key={index} data={product} />
                     </div>
                     );}
                 }

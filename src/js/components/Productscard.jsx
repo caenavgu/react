@@ -10,14 +10,20 @@ export class Productscard extends React.Component{
     const productsAsHTMLElements = this.props.data.map((product, i) => {
       // expression goes here:
       { if(i<4){
-          return (<ProductItem key={i} data={product} align={"center"} border={"all"} />);
+          return (
+            <div className="col-xs-3 p-0 m-0 mx-auto">
+              <ProductItem key={i} data={product} align={"center"} border={"all"} />
+            </div>  
+              );
         }
       }
     });
     
       return(
-        <div className='container-fluid'>
-          <div className="card-deck row"> {productsAsHTMLElements} </div>
+        <div className='container-fluid no-gutters'>
+          <div className="card-deck row py-3">
+              {productsAsHTMLElements}
+          </div>  
         </div>
       );
       
