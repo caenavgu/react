@@ -9,8 +9,8 @@ export class HorizontalCard extends React.Component{
     <div className="card">
       <div className="row ">
         <div className="col-md-4">
-            <img src="/src/img/homeProducts/devshui-help.jpg" className="w-100"/>
-          </div>
+          <img src="/src/img/homeProducts/devshui-help.jpg" className="w-100"/>
+        </div>
           <div className="col-md-8 p-5">
             <div className="card-block">
               <h4 className="card-title">We Love MIA, So We Dev MIA</h4>

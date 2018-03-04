@@ -26,15 +26,14 @@ export class CategoryArea extends React.Component{
     const categoryAreaDiv= this.state.labels.map((label, index) => {
       // expression goes here:
       return( 
-        <div key={index} className={(index==0) ? "tab-pane fade show active":'tab-pane fade show'} id={label} role="tabpanel" aria-labelledby={index}>
-          <div className="container">
+        <div className="container-fluid" key={index} className={(index==0) ? "tab-pane fade show active":'tab-pane fade show'} id={label} role="tabpanel" aria-labelledby={index}>
             <div className="row">
               {this.props.data.map((product, index) => {
               // expression goes here:
                 {
-                  if(index < 8){
+                  if(index < 6){
                     return(
-                    <div className='col-md-3'>
+                    <div className='col-xs-2'>
                       <ProductItem key={index} data={product} align={"left"}/>
                     </div>
                     );}
@@ -42,13 +41,12 @@ export class CategoryArea extends React.Component{
                })
               }
             </div>
-          </div>
         </div>
       );
     });
     
     return(
-      <div className='container'>
+      <div className='container-fluid'>
         <nav>
           <div className="nav nav-tabs" id="nav-tab" role="tablist">
             {categoryAreaLabels}
