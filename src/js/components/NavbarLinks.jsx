@@ -38,7 +38,7 @@ constructor (props){
       
     render() {
         return(
-            <div className='header'>
+            <div className='container-fluid p-0'>
                                 
                 <nav className="navbar navbar-expand-md navbar-light bg-light mb-1">
 
@@ -49,10 +49,12 @@ constructor (props){
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto">
                       {this.renderMenu(this.theMenu)}
-                      <li><a href="/Cart"><CartStatus /></a></li>
                     </ul>
                     {/*{this.props.CartStatus}*/}
                   </div>
+                    <ul className="navbar-nav mx-auto">
+                      <li><a href="/Cart"><CartStatus /></a></li>
+                    </ul>
                 </nav>
             </div>
             );

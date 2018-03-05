@@ -33,7 +33,7 @@ export class CategoryArea extends React.Component{
                 {
                   if(index < 6){
                     return(
-                    <div className='col-xs-2'>
+                    <div className='col-xs-2 mx-auto'>
                       <ProductItem key={index} data={product} />
                     </div>
                     );}

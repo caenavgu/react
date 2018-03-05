@@ -9,7 +9,7 @@ export class ProductMain extends React.Component{
                     <div className="col-8 mx-auto">
                         <div className="row">
                             <div className='col-xs-6 mr-1'>
-                                <img src={this.props.data.url_image_product} className="img-responsive"/>
+                                <img src={this.props.data.url_image_product} className="img-fluid"/>
                             </div>
                             <div className='col-xs-6 pt-3'>
                                 <h1>{this.props.data.name_product}</h1>
