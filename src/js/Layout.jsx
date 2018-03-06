@@ -50,8 +50,8 @@ export class Layout extends React.Component{
                                 <Route exact path='/ContactUs' component={ContactUs} />
                                 <Route exact path='/AdminProductView' component={AdminProductView} />
                             </Switch>
-                        </div>    
-                    </BrowserRouter> 
+                    </div>    
+                </BrowserRouter> 
             </div>
         );
     }
