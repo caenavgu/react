@@ -55,6 +55,14 @@ export class CategoryArea extends React.Component{
                     }
                } 
               })
+                //   if(indexDiv < 8){
+                //     return(
+                //     <div className='col-md-3'>
+                //       <ProductItem key={index} data={product} align={"left"}/>
+                //     </div>
+                //     );}
+                // }
+              // })
               }
             </div>
           </div>

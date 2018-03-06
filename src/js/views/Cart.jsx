@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProductMain} from '../components/ProductMain';
 
 export class Cart extends React.Component{
     
@@ -27,10 +28,10 @@ constructor () {
                     <tr>
                         <td className="mx-auto">
                             <div className="media">
-                                <a className="thumbnail pull-left p-2" href="#"><img className="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" /></a>
+                                <a className="thumbnail pull-left p-2" href="#"><img className="media-object" src="https://i.imgur.com/CnmdnIN.jpg" /></a>
                                     <div className="media-body">
-                                        <h4 className="media-heading"><a href="#">Product name</a></h4>
-                                        <h5 className="media-heading"> by <a href="#">Brand name</a></h5>
+                                        <h4 className="media-heading"><a href="#">Python Shirt</a></h4>
+                                        <h5 className="media-heading"> by <a href="#">DevShui Tech</a></h5>
                                         <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                                     </div>
                             </div>
@@ -40,10 +41,10 @@ constructor () {
 
                         </td>
                         <td className="col-sm-1 col-md-1 text-center">
-                            <strong>$4.87</strong>
+                            <strong>$ 14.99</strong>
                         </td>
                         <td className="col-sm-1 col-md-1 text-center">
-                            <strong>$14.61</strong>
+                            <strong>$14.99</strong>
                         </td>
                         <td className="col-sm-1 col-md-1">
                             <button type="button" className="btn btn-danger"><span className="glyphicon glyphicon-remove"></span>Remove</button>
@@ -57,7 +58,7 @@ constructor () {
                                     <td>   </td>
                                     <td>   </td>
                                     <td><h5>Subtotal</h5></td>
-                                    <td className="text-right"><h5><strong>$24.59</strong></h5></td>
+                                    <td className="text-right"><h5><strong>$14.99</strong></h5></td>
                                 </tr>
                                 <tr>
                                     <td>   </td>
@@ -71,7 +72,7 @@ constructor () {
                                     <td>   </td>
                                     <td>   </td>
                                     <td><h3>Total</h3></td>
-                                    <td className="text-right"><h3><strong>$31.53</strong></h3></td>
+                                    <td className="text-right"><h3><strong>$21.93</strong></h3></td>
                                 </tr>
                                 <tr>
                                     <td>   </td>
