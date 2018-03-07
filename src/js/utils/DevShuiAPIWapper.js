@@ -56,12 +56,12 @@ var DevShuiAPIWapper = {
         
         },
         
-        // getSingleProduct: function(idProduct) {
+        // postProductToCart: function(idUser, idProduct) {
         //     return this.callMethod(
-        //     'GET',
-        //     'https://django-caenavgu.c9users.io/api/product/'+idProduct
+        //     'POST',
+        //     'https://class-project-backend-jonnywrites.c9users.io/api/user/',
+        //     requestBody
         //     );
-        
         // },
         
         userValidate: function(formData) {
@@ -80,13 +80,6 @@ var DevShuiAPIWapper = {
             );
         },
         
-        editProfileConfirm: function(requestBody) {
-            return this.callMethod(
-            'POST',
-            'https://class-project-backend-jonnywrites.c9users.io/api/user/',
-            requestBody
-            );
-        },
         
         passwordResetConfirm: function(requestBody) {
             return this.callMethod(

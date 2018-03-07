@@ -49,6 +49,10 @@ constructor (props){
                   <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mx-auto">
                       {this.renderMenu(this.theMenu)}
+<<<<<<< HEAD
+=======
+                      <li><a href="https://react-caenavgu.c9users.io/Cart"><CartStatus /></a></li>
+>>>>>>> 02c751923d7529e05482b0016598d796ebd348d1
                     </ul>
                     {/*{this.props.CartStatus}*/}
                   </div>

@@ -50,3 +50,15 @@ export function getSingleProductAction(idProduct) {
         console.log('Error in the getSingleProduct request', err);
     });
 }
+
+export function postProductToCartAction(idUser, idProduct) {
+    // body...
+    DevShuiAPIWapper.postProductToCart(idProduct).then(function(productInformation){
+        dispatcher.dispatch({
+            actionData: productInformation,
+            actionType: 'GET_SINGLE_PRODUCT',
+        });   
+    }).catch(function(err){
+        console.log('Error in the getSingleProduct request', err);
+    });
+}

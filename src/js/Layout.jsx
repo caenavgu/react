@@ -13,10 +13,8 @@ import {About} from './views/About.jsx';
 import {BecomeASeller} from './views/BecomeASeller.jsx';
 import {ContactUs} from './views/ContactUs.jsx';
 import {AdminProductView} from './views/AdminProductView.jsx';
-
 import {ProductPage} from './views/ProductPage';
 import {SearchResultsPage} from './views/SearchResultsPage.jsx';
-
 import {SearchResults} from './components/SearchResults';
 import {ProductMain} from './components/ProductMain';
 import {Searchbar1} from './components/Searchbar1.jsx';
@@ -52,10 +50,9 @@ export class Layout extends React.Component{
                                 <Route exact path='/ContactUs' component={ContactUs} />
                                 <Route exact path='/AdminProductView' component={AdminProductView} />
                             </Switch>
-                        </div>    
-                    </BrowserRouter> 
+                    </div>    
+                </BrowserRouter> 
             </div>
-            );
+        );
     }
-    
 }
