@@ -26,7 +26,6 @@ export class CategoryArea extends React.Component{
     const categoryAreaDiv= this.state.labels.map((label, indexDiv) => {
       // expression goes here:
       return( 
-<<<<<<< HEAD
         <div className="container-fluid" key={index} className={(index==0) ? "tab-pane fade show active":'tab-pane fade show'} id={label} role="tabpanel" aria-labelledby={index}>
             <div className="row mx-auto">
               {this.props.data.map((product, index) => {
@@ -40,8 +39,7 @@ export class CategoryArea extends React.Component{
                     );}
                 }
                })
-=======
-        <div key={indexDiv} className={(indexDiv==0) ? "tab-pane fade show active":'tab-pane fade show'} id={indexDiv} role="tabpanel" aria-labelledby={indexDiv}>
+        <div>
           <div className="container">
             <div className="row"> 
               {this.props.data.map((product, i) => {
@@ -78,20 +76,22 @@ export class CategoryArea extends React.Component{
                 //     );}
                 // }
               // })
->>>>>>> 02c751923d7529e05482b0016598d796ebd348d1
+
               }
             </div>
         </div>
-      );
+      
     });
     
     return(
       <div className='container-fluid'>
-        <nav>
-          <div className="nav nav-tabs text-uppercase" id="nav-tab" role="tablist">
-            {categoryAreaLabels}
-          </div>
-        </nav>
+        <div className="row">  
+          <nav>
+            <div className="nav nav-tabs text-uppercase" id="nav-tab" role="tablist">
+              {categoryAreaLabels}
+            </div>
+          </nav>
+        </div>
         <div className="tab-content" id="nav-tabContent">
           {categoryAreaDiv}
         </div>

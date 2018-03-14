@@ -12,7 +12,7 @@ constructor () {
         return(
 <div className="container">
     <div className="row">
-        <div className="col-8 mx-auto">
+        <div className="col-xs-8 mx-auto">
             <table className="table table-hover">
                 <thead>
                     <tr>
